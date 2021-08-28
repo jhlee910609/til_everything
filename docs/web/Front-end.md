@@ -1,4 +1,4 @@
-# web
+# Front end
 
 - [[bundler]]
 
