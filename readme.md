@@ -1,3 +1,3 @@
 # Foam
 
-[[bundler]]
+- [[bundler]]
