@@ -1,4 +1,0 @@
-# front end
-
-- [[bundler]]
-- [[browser]]
