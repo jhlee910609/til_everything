@@ -11,7 +11,7 @@
   font-style: normal;
 }
 
-body {
+html * {
   font-family: "RIDIBatang" !important;
 }
 
@@ -40,5 +40,5 @@ h3,
 h4,
 h5,
 blockquote {
-  font-family: "RIDIBatang";
+  font-family: "RIDIBatang" !important;
 }
