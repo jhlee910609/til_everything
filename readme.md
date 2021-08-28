@@ -1,3 +1,1 @@
-# Foam
-
-- [[bundler]]
+- [[index]]
