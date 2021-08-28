@@ -1,5 +1,7 @@
 # javascript
 
+> javascript의 keyword를 기준으로 개념을 공부합니다.
+
 - [[execution-context]]
 - [[closure]]
 - [[hoisting]]
