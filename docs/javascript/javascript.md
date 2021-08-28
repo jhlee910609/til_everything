@@ -1,4 +1,4 @@
-# Javascript
+# javascript
 
 - [[execution-context]]
 - [[closure]]
