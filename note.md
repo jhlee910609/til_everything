@@ -1,2 +1,3 @@
 # note
 
+- [[inspiration]]
