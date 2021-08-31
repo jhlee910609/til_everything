@@ -13,6 +13,7 @@
 ### 2. scss file import 역구조
 
 - scss파일들이 최상위 파일에 전부 import하여 scss파일을 transpiling하고 있었습니다.
+- 그로 인해
 
 ## css global variables
 
