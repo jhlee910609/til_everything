@@ -2,6 +2,7 @@
 
 > front end 지식을 정리합니다.
 
+- [[css]]
 - [[bundler]]
 - [[browser]]
 - [[design-system]]
