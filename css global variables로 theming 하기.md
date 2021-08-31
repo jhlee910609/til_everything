@@ -1,13 +1,16 @@
 # css global variables로 theming 하기
 
-> 회사 업무 중, scss 파일로 인해 build performance 저하 및 bundle 결과물 용량이 커지는 문제가 있다.
-> 이를 해결해고자 찾아본 방법 중 하나.
+> 회사 업무 중, scss 파일로 인해 build performance 저하 및 bundle 결과물 용량이 커지는 문제가 발생하고 있었습니다.
+> 이를 해결하고자 찾아본 방법 중 하나입니다.
 
 ## css global variables
 
-- `var()`를 사용하여 값(value) 대신 변수를 넣는 css 함수이다.
-- 보통 constants style value들을
+- `var()`를 사용하여 값(value) 대신 변수를 넣는 css 함수입니다.
+- 보통 constants style value들을 global하게 선언해두고 사용합니다.
+- 위 특성들을 활용하여, theming을 하기도 한다.
 
 ## example
 
 - [참고 예제](https://codesandbox.io/s/react-and-scss-forked-m0854?file=/src/components/Itemview/ItemView.jsx:0-31)
+
+f
