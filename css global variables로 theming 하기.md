@@ -5,6 +5,8 @@
 
 # 기존 방식의 문제점
 
+1. ## 파일 교체 방식으로 인해 css modules를 사용할 수 없습니다.
+
 ## css global variables
 
 - `var()`를 사용하여 값(value) 대신 변수를 넣는 css 함수입니다.
