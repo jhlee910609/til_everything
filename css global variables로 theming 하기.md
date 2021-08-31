@@ -5,7 +5,8 @@
 
 # 기존 방식의 문제점
 
-1. ## 파일 교체 방식으로 인해 css modules를 사용할 수 없습니다.
+- 파일 교체 방식으로 인해 css modules를 사용할 수 없습니다.
+  - theme가
 
 ## css global variables
 
