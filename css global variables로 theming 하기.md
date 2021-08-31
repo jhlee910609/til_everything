@@ -5,8 +5,11 @@
 
 # 기존 방식의 문제점
 
+### 1. 파일 교체 방식의 theming
+
 - 파일 교체 방식으로 인해 css modules를 사용할 수 없습니다.
-  - theme가
+  - theme가 build timing에 결정됩니다.
+-
 
 ## css global variables
 
