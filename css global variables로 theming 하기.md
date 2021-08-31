@@ -9,6 +9,9 @@
 
 - 파일 교체 방식으로 인해 css module[^1]를 사용할 수 없습니다.
   - theme가 build timing에 결정됩니다. 따라서, 이미 theming이 결정된 bundle.js serving 받은 사용자는 실시간으로 theme를 바꿀 수 없습니다.
+
+### 2. scss file import 역구조
+
 -
 
 ## css global variables
