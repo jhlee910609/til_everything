@@ -21,4 +21,4 @@
 
 - [참고 예제](https://codesandbox.io/s/react-and-scss-forked-m0854?file=/src/components/Itemview/ItemView.jsx:0-31)
 
-[^1]: asdfsadfsdf
+[^1]: [css-modules/css-modules: Documentation about css-modules](https://github.com/css-modules/css-modules)
