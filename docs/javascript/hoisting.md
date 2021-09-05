@@ -27,3 +27,9 @@ function printName(name) {
 ## 선언만 hoisted 됩니다.
 
 - 즉, 쉽게 이해하자면 초기화는 hoisted 되지 않습니다.
+
+```javascript
+console.log(name); // The result is 'undefined'
+var name = "lee";
+console.log(name); // The result is 'lee'
+```
