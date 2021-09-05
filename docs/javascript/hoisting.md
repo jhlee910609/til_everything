@@ -41,3 +41,5 @@ console.log(name); // The result is 'lee'
 console.log(name); // Throws ReferenceError exception
 name = "lee"; // Initialization
 ```
+
+## `let`과 `const`의 hoisting
