@@ -35,4 +35,9 @@ name = "lee"; // initialization
 console.log(name); // The result is 'lee'
 ```
 
--
+- 변수 선언 없이 초기화만 이뤄진 변수를 참조할 경우, hoisted 되지 않으며 `ReferenceError`를 뱉게 됩니다.
+
+```javascript
+console.log(name); // Throws ReferenceError exception
+name = "lee"; // Initialization
+```
