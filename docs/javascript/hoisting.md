@@ -8,4 +8,4 @@
 ## hoisting이란?
 
 - javascript hoisting은 코드 실행 전에 변수와 함수 선언을 interpreter가 memory에 할당하는 절차를 일컫습니다. `var` 선언은 `undefined`로 초기화됩니다. 하지만 `let`과 `const`는 hoisting의 일부로 초기화되지 않습니다.
-- 개념적으로 hoisting은 종종 "변수 선언과 초기화, 그리고 그 선언들을 코드의 가장 상단으로 옮기는 것"으로 표현됩니다.
+- 개념적으로 hoisting은 종종 "변수 선언과 초기화, 그리고 그 선언들을 코드의 가장 상단으로 옮기는" interpreter로서 표현됩니다. 이는 변수가 정의되기 전에, 코드에 나타날 수 있게 해줍니다. 그러나,
