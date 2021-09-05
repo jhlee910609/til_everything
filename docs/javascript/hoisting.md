@@ -44,4 +44,4 @@ name = "lee"; // Initialization
 
 ## `let`과 `const`의 hoisting
 
--
+- `let`과 `const`도 hoisted 되지만, `var`와 다르게 `undefined`로 초기화되지 않습니다.
