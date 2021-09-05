@@ -23,3 +23,5 @@ function printName(name) {
   console.log(name);
 }
 ```
+
+## 선언만 hoisted 됩니다.
