@@ -7,4 +7,4 @@
 
 ## hoisting이란?
 
--
+- javascript hoisting은 코드 실행 전에 변수와 함수 선언을
