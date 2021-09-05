@@ -7,4 +7,5 @@
 
 ## hoisting이란?
 
-- javascript hoisting은 코드 실행 전에 변수와 함수 선언을
+- javascript hoisting은 코드 실행 전에 변수와 함수 선언을 interpreter가 memory에 할당하는 절차를 일컫습니다.
+- `var` 선언은
