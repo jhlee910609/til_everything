@@ -43,3 +43,5 @@ name = "lee"; // Initialization
 ```
 
 ## `let`과 `const`의 hoisting
+
+-
