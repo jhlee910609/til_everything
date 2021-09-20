@@ -17,11 +17,11 @@
 - [WeakMap 관련 오역 수정](https://github.com/mdn/translated-content/issues/2296)
 - [CORS 관련 오역 수정](https://github.com/mdn/translated-content/issues/1323)
 
-- [jspread sheet](https://github.com/jspreadsheet/ce)
+## [jspread sheet](https://github.com/jspreadsheet/ce)
 
-  > javascript data grid open source library의 잘못된 코드를 수정하였습니다.
+> javascript data grid open source library의 잘못된 코드를 수정하였습니다.
 
-  - [중복코드 제거](https://github.com/jspreadsheet/ce/pull/1305)
+- [중복코드 제거](https://github.com/jspreadsheet/ce/pull/1305)
 
 ## [(번역) React interview questions 500](https://github.com/jhlee910609/reactjs-interview-questions)
 

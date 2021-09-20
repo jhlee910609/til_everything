@@ -1,8 +1,8 @@
 # 이력서
 
-### About me
+## About me
 
-### Work experiences
+## Work experiences
 
 - 제 경력과 그 속에서 경험한 것들을 정리하였습니다.
 
@@ -11,7 +11,7 @@
 | 2020.01 ~         | [[미리디]]            | [미리캔버스](https://www.miricanvas.com/design) 프론트엔드 개발 |
 | 2019.05 ~ 2019.11 | [[위스터디(weStudy)]] | 학원 관리 솔루션 Tims 프론트엔드 개발                           |
 
-### Personal experiences
+## Personal experiences
 
 - 회사 외의 스스로 얻고자 했던 경험들을 정리하였습니다.
 
