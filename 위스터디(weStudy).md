@@ -4,7 +4,7 @@
 
 # 학원 관리 솔루션 Tims FE 개발
 
-- `2019.05` ~ `2019.11` 재직
+- `2019.05` ~ `2019.12` 재직
 - `React.Js`, `lodash`, `scss`, `Javascript(es6)`, `react router`, `webpack`, `babel`, `eslint(standard js)`, `stylelint`, `reset css`, `material-ui` 활용하여 개발
 - 컴포넌트 개발 시, `Container-Presenter 패턴`을 활용하여 개발
 
