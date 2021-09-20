@@ -2,7 +2,7 @@
 
 ## About me
 
-- 사용자와 가장 맞닿아 있는 Front-end를
+- 사용자와 가장 맞닿아 있는 Front-end 개발자입니다. 누군가에게
 
 ## Work experiences
 
