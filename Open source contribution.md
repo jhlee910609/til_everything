@@ -8,6 +8,7 @@
 
 - [react-product-analytics](https://github.com/EveryAnalytics/web-analytics-handbook)
 - [웹 데이터 분석 관련 handbook page](https://everyanalytics.github.io/web-analytics-handbook/)
+- [@every-analytics/react-analytics-provider - npmDownloads](https://www.npmjs.com/package/@every-analytics/react-analytics-provider)
 
 ## MDN 문서 오역 바로 잡기
 
