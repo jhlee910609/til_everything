@@ -1,6 +1,6 @@
 # Open source contribution
 
-> 관심을 갖고 꾸준히 하기 위해 노력하고 있습니다. 작은 것이라고 바로 잡고, 기여하고자 노력합니다.
+> 관심을 갖고 꾸준히 하기 위해 노력하고 있습니다. 작은 것이라도 모두를 위해 기여하기 위해 노력합니다.
 
 ## React Wrapper component opensource `react-analytics-provider` contributor
 
