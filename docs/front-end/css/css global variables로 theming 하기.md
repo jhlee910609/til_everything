@@ -12,7 +12,7 @@
 
 ### 2. scss file import 역구조
 
-- scss파일들이 최상위 파일에 전부 import하여 scss파일을 괸리하고 있었습니다.
+- scss파일들이 최상위 파일에 전부 import하여 scss파일을 관리하고 있었습니다.
 - 그로 인해 build/rebuild 속도 저하 및 스타일 파일 용량이 비대한 느낌이었습니다.
 
 ## 해결책
