@@ -2,7 +2,8 @@
 
 ## About me
 
-- 사용자와 가장 맞닿아 있는 Front-end 개발자입니다. 누군가에게
+- 사용자와 가장 맞닿아 있는 Front-end 개발자입니다. 누군가 제 서비스를 사용하다는 게 너무 설레고 행복합니다.
+- [최근에는 open source contribution과 Product Analytics에 관심을 갖고 있습니다.](https://jhlee910609.github.io/til_everything/Open%20source%20contribution#react-wrapper-component-opensource-react-analytics-provider-contributor)
 
 ## Work experiences
 
