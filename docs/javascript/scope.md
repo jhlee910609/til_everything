@@ -8,8 +8,6 @@
 - 유효 범위
 - 참조 대상 식별자(identifier)[^1]를 찾아 내기 위한 규칙입니다. javascript는 이 규칙대로 식별자를 찾습니다.
 
-[^1]: sfdsadf
-
 ```javascript
 var a = "global";
 function foo() {
@@ -19,3 +17,5 @@ function foo() {
 console.log(a); // global
 foo(); // local
 ```
+
+[^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
