@@ -79,7 +79,7 @@ console.log(b); // Error: ReferenceError: Can't find variable: b
 ```javascript
 var a = "a";
 (() => {
-  var a = "b"; // 익명 함수 scope 내의 local varibale
+  var a = "b"; // 익명 함수 scope 내의 local varibale로 global variable a 값에 변화를 주지 않습니다.
 })();
 
 console.log(a); // a
@@ -92,14 +92,15 @@ function foo() {
   var a = 5;
 
   function bar() {
-    // 내부함수
-    console.log(a); // 5
+    // 내부함수로 상위 함수의 지역 변수에 접근(참조) 가능합니다.
+    a = 100;
+    console.log(a); // 100
   }
   bar();
 }
 
 console.log(a); // a
-foo(); // 5
+foo(); // 100
 ```
 
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
