@@ -6,7 +6,9 @@
 ## scope란?
 
 - 유효 범위
-- 참조 대상 식별자(identifier)를 찾아 내기 위한 규칙입니다. javascript는 이 규칙대로 식별자를 찾습니다.
+- 참조 대상 식별자(identifier)[^1]를 찾아 내기 위한 규칙입니다. javascript는 이 규칙대로 식별자를 찾습니다.
+
+[^1]: sfdsadf
 
 ```javascript
 var a = "global";
