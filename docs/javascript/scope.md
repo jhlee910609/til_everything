@@ -32,4 +32,9 @@ javascript의 scope는 global scope(전역 스코프)와 local scope(지역 스�
 - 함수 코드 블록이 만든 scope로 함수 자신과 하위 함수에서만 참조할 수 있습니다. (상위 scope에서는 참조 불가능합니다.)
 - local scope에 할당된 변수는 local variable(지역 변수)가 됩니다.
 
+## javascript만의 scope 특징
+
+대부분의 programming language는 block-level scope[^2]를 따릅니다.
+
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
+[^2]: 코드 블록({...}) 내에서 유효한 스코프를 의미
