@@ -63,8 +63,8 @@ javascript의 scope는 global scope(전역 스코프)와 local scope(지역 스�
 
 ### 2. local scope(function-level scope, 지역 스코프)
 
-- 함수 코드 블록이 만든 scope로 함수 자신과 하위 함수에서만 참조할 수 있습니다. (상위 scope에서는 참조 불가능합니다.)
-- local scope에 할당된 변수는 local variable(지역 변수)가 됩니다.
+함수 코드 블록이 만든 scope로 함수 자신과 하위 함수에서만 참조할 수 있습니다. (상위 scope에서는 참조 불가능합니다.)
+local scope에 할당된 변수는 local variable(지역 변수)가 됩니다.
 
 ```javascript
 var a = "a";
@@ -86,14 +86,20 @@ console.log(a); // a
 ```
 
 ```javascript
-var a = "a";
+var a = 10;
 
 function foo() {
-  console.log(a);
+  var a = 5;
+
+  function bar() {
+    // 내부함수
+    console.log(a); // 5
+  }
+  bar();
 }
 
 console.log(a); // a
-foo();
+foo(); // 5
 ```
 
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
