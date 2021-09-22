@@ -7,6 +7,7 @@
 
 - 유효 범위
 - 참조 대상 식별자(identifier)[^1]를 찾아 내기 위한 규칙입니다. javascript는 이 규칙대로 식별자를 찾습니다.
+- 아래 예시를 보면 변수 a는 global scope와 foo 함수 내부 두 곳에서 같은 변수명으로 사용하고 있습니다. 그럼에도 우리가 의도한대로 console에 `a`에 각각 할당된 local, global 순으로 문자열이 출력되게 되는데요. 이런 상황 또한, console에 찍어야할 `a`가 어떤 `a`인지 결정되게 됩니다.
 
 ```javascript
 var a = "global";
