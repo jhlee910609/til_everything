@@ -8,4 +8,6 @@
 
 - 전역 코드: global scope에 존재하는 코드
 - 함수 코드: function-level scope에 존재하는 코드
-- eval 코드: eval 함수로 실행되는 코드
+- eval 코드: eval 함수[^1]로 실행되는 코드
+
+[^1]: [eval() - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)
