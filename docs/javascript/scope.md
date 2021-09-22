@@ -136,6 +136,28 @@ foo(); // 1
 bar(); // 1
 ```
 
+## 그 밖의 특이점
+
+### 1. implicit global
+
+할당 scope 위치와 상관 없이 var keyword(변수 선언 keyword)를 사용하지 않고, 값을 할당했을때 global object의 property로 할당됩니다.
+
+```javascript
+var x = 10;
+
+function foo() {
+  y = 20;
+  bar = function () {
+    console.log("bar");
+  };
+  console.log(x + y);
+}
+
+foo(); // 30
+console.log(y); // 20
+console.log(bar()); // bar
+```
+
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
 [^2]: 코드 블록({...}) 내에서 유효한 스코프를 의미
 [^3]: Browser - `window`, node.js - `global`
