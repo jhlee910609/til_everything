@@ -158,6 +158,21 @@ console.log(y); // 20
 console.log(bar()); // bar
 ```
 
+### 2. global variable 지양하기
+
+- object 활용하기 - object에 감싸서 명시적으로 사용
+- 즉시실행함수 활용하기 - 함수 활용을 통해 scope를 좁혀 사용
+
+```javascript
+// 한 번 실행되고, 버려진다.
+(function () {
+  var a = "a";
+  console.log(a);
+})();
+
+console.log(a); // Error: ReferenceError: Can't find variable: a
+```
+
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
 [^2]: 코드 블록({...}) 내에서 유효한 스코프를 의미
 [^3]: Browser - `window`, node.js - `global`
