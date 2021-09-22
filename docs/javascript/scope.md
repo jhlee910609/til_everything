@@ -38,7 +38,17 @@ javascript의 scope는 global scope(전역 스코프)와 local scope(지역 스�
 하지만 javascript는 function-level scope를 따릅니다. 물론, ES6 문법의 let을 활용한다면 block-level scope를 사용할 수 있습니다.
 
 ```javascript
+var a = "global a";
+{
+  var a = "local a"; // global variable a의 값에 대입됩니다.
+}
 
+let b = "global b";
+{
+  let b = "local b";
+}
+console.log(a); // local a
+console.log(b); // global b
 ```
 
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
