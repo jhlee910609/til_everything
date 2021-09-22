@@ -35,6 +35,11 @@ javascript의 scope는 global scope(전역 스코프)와 local scope(지역 스�
 ## javascript만의 scope 특징
 
 대부분의 programming language는 block-level scope[^2]를 따릅니다.
+하지만 javascript는 function-level scope를 따릅니다. 물론, ES6 문법의 let을 활용한다면 block-level scope를 사용할 수 있습니다.
+
+```javascript
+
+```
 
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
 [^2]: 코드 블록({...}) 내에서 유효한 스코프를 의미
