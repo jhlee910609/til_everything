@@ -84,6 +84,7 @@ console.log(b); // Error: ReferenceError: Can't find variable: b
 ```javascript
 var a = "a";
 (() => {
+  console.log(a); // undefined가 출력됩니다. local variable a가 hoisting 되기 때문입니다. 만약 local variable a가 아닌 b라는 이름으로 사용했다면 global variable a가 찍히게 됩니다.
   var a = "b"; // 익명 함수 scope 내의 local varibale로 global variable a 값에 변화를 주지 않습니다.
 })();
 
