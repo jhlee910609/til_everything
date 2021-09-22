@@ -47,7 +47,18 @@ javascript의 scope는 global scope(전역 스코프)와 local scope(지역 스�
 - global scope에 할당된 변수는 global variable(전역 변수)가 됩니다.
 
   ```javascript
+  var global = "global";
 
+  function foo() {
+    var local = "local";
+    console.log(global); // global
+    console.log(local); // local
+  }
+
+  foo();
+
+  console.log(global); // global
+  console.log(local); // Error: ReferenceError: Can't find variable: local
   ```
 
 ### 2. local scope(function-level scope, 지역 스코프)
