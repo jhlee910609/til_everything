@@ -5,6 +5,7 @@
 ## execution context란?
 
 실행 가능한 코드(executable code)가 실행되기 위해 필요한 환경입니다.
+execution context는 실행 가능한 코드를 형상화하고, 구분하는 추상적인 개념입니다.
 실행 가능한 코드는 아래와 같습니다.
 
 - 전역 코드: global scope에 존재하는 코드
@@ -15,5 +16,8 @@
 코드 실행에 필요한 정보들은 아래와 같습니다.
 
 - 변수: global variable, local variable, parameter, object property
+- 함수 선언
+- 변수의 유효범위(scope)
+- this
 
 [^1]: [eval() - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)
