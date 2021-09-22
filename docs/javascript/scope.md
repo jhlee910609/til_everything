@@ -65,6 +65,9 @@ javascript의 scope는 global scope(전역 스코프)와 local scope(지역 스�
 
 함수 코드 블록이 만든 scope로 함수 자신과 하위 함수에서만 참조할 수 있습니다. (상위 scope에서는 참조 불가능합니다.)
 local scope에 할당된 변수는 local variable(지역 변수)가 됩니다.
+아래 예시 코드들은 javascript의 local scope 특징을 활용한 예시입니다.
+
+- local scope 내부에 할당된 변수는 상위 scope에서 참조 불가능합니다.
 
 ```javascript
 var a = "a";
@@ -75,6 +78,8 @@ var a = "a";
 console.log(a); // a
 console.log(b); // Error: ReferenceError: Can't find variable: b
 ```
+
+- local scope에 같은 이름의 식별자가 있더라도 global scope에 영향을 주지 않습니다.
 
 ```javascript
 var a = "a";
