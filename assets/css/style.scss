@@ -4,15 +4,15 @@
 @import "{{ site.theme }}";
 
 @font-face {
-  font-family: "RIDIBatang";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+  font-family: "Noto Sans KR", sans-serif;
+  src: url("http://fonts.googleapis.com/earlyaccess/notosanskr.css")
     format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 html * {
-  font-family: "RIDIBatang" !important;
+  font-family: "Noto Sans KR", sans-serif !important;
 }
 
 .markdown-body {
@@ -40,5 +40,5 @@ h3,
 h4,
 h5,
 blockquote {
-  font-family: "RIDIBatang" !important;
+  font-family: "Noto Sans KR", sans-serif !important;
 }
