@@ -109,6 +109,33 @@ console.log(a); // a
 foo(); // 100
 ```
 
+### 3. lexical scope(static scope, 정적 스코프)
+
+programming language에서 함수의 상위 스코프를 결정하는 방식은 아래와 같은 두 가지입니다.
+
+1. dynamic scope - 함수를 어디서 호출하였는지에 따라 상위 스코프가 결정됩니다.
+2. lexical scope(static scope) - 함수 선언 위치에 따라 상위 스코프가 결정됩니다.
+
+javascript를 비롯한 대부분의 programming language는 lexical scope를 따릅니다.
+따라서, 함수 선언 시점이 상위 스코프를 결정하는 데에 영향을 줍니다.
+
+```javascript
+var x = 1;
+
+function foo() {
+  var x = 10;
+  bar();
+}
+
+function bar() {
+  // bar는 global scope 내에 선언됐습니다.
+  console.log(x);
+}
+
+foo(); // 1
+bar(); // 1
+```
+
 [^1]: 변수, 함수의 이름과 같이 어떤 대상을 다른 대상과 구분하여 식별할 수 있는 유일한 이름
 [^2]: 코드 블록({...}) 내에서 유효한 스코프를 의미
 [^3]: Browser - `window`, node.js - `global`
