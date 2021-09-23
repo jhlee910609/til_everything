@@ -9,4 +9,4 @@
 
 - 혁신을 이룩하는 것은 매우 힘든 일이다. lean start-up은 새로운 것을 창조하는 일을 좀 더 엄밀히 수행할 수 있는 체계를 제공한다.
 - lean start-up 모델은 intellectual honesty를 추구한다.
--
+- lean과 분석은
