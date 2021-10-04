@@ -1,6 +1,7 @@
 # yarn workspace
 
-> yarn workspace
+> yarn workspace를 도입해보자!
+> 내가 참여하는
 
 - mono repo
 - yarn berry pnp mode
