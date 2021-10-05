@@ -24,7 +24,7 @@
 따라서, classname 충돌이나 naming에 크게 신경쓰지 않아도 됩니다.
 component 기반의 개발 방식에서는 굉장히 중요한 특징입니다.
 
-#### 2. vendor prefix 자동화
+#### 2. vendor prefix 자동화를 지원합니다.
 
 - 브라우저에 따라 다른 속성들에 대한 prefix를 기본으로 제공해줍니다. 따라서 개발자는 `transition`만
 
@@ -47,7 +47,16 @@ transition: all 1s ease;
 
 #### 3. inline-style을 사용하지 않습니다.
 
-css에 비해 javascript inline styles는 성능이 좋지 않습니다.
+css에 비해 javascript inline styles는 성능이 좋지 않습니다.[^2]
+external css file을 가지고 있을 경우, browser에 캐싱이 가능하지만 각각의 요소에 스타일을 입히는 inline-style의 경우, 캐싱이 불가능하여 성능에 부정적인 영향을 줍니다.
+
+#### 4. css의 모든 기능을 지원합니다.
+
+- pseudo classes and elements
+- media query
+- keyframe animations
+
+zero runtime vs build? vs nearly zero runtime
 
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 
@@ -57,3 +66,4 @@ https://github.com/seek-oss/vanilla-extract#style
 https://stitches.dev
 
 [^1]: [Webpack — Build Performance Pitfall of using SASS with CSS Modules | by Will Po | jsdownunder | Medium](https://medium.com/jsdownunder/webpack-build-performance-pitfall-of-using-sass-with-css-modules-ba32f89efdcb)
+[^2]: [External CSS vs inline style performance difference? | NewbedevMenu](https://newbedev.com/external-css-vs-inline-style-performance-difference)
