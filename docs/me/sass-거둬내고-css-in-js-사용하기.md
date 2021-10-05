@@ -12,6 +12,13 @@
 - 여기서 `CSS Modules`를 활용하여 각각의 component에서 Import하여 sass를 사용했을 경우, stylesheet가 모두 모듈화되어 각각 고유한 sass 프로세스가 되고, 빌드 환경에 따라 그 속도는 더 최악이 될 수 있다고 합니다.😢
 - 실제로 한 회사는 `sass`와 `sass-loader`를 제거하고, PostCss와 CSSNext를 도입하여 build 시간을 50%나 줄였다고 합니다.[^1]
 
+## css-in-js를 도입하자!
+
+우선 sass-loader가 태생이 매우 느린 build performance를 보이고 있었기 때문에 이를 제거해나갈 고민을 하였습니다. 여러 방식을 찾아보다가 `css-in-js`를 도입하기로 결정했습니다. 그 결정의 이유는 다음와 같습니다.
+
+- 무엇보다 거대해진 sass 파일들과 archtecting 없이 작성된 sass 파일을 줄여 나가야겠다는 판단을 하였습니다. sass 속성 하나를 바꿔도 rebuild time이 10초 이상 걸리기도 했기 때문에 큰 부채라고 생각하였습니다.
+- 하나의 js파일에서 스타일까지 다룰 수 있어 개발 생산성이 높아질 수 있을 것을 기대했습니다.
+
 ## css-in-js
 
 별도의 style file 형식이 아닌 javascript 코드 내에서 css를 작성하는 방식입니다.
