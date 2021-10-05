@@ -6,6 +6,11 @@
 
 > build/rebuild 속도가 너무 느린데, 느린 build 속도의 대부분은 sass-loader였다!
 
+- `sass-loader`가 트랜스파일한 SASS 파일은 캐시되지 않는다.
+- 여기서 `CSS Modules`를 활용하여 각각의 component에서 Import하여 sass를 사용했을 경우, 그 속도는 더 최악이다..
+
+  -
+
 - [Webpack — Build Performance Pitfall of using SASS with CSS Modules | by Will Po | jsdownunder | Medium](https://medium.com/jsdownunder/webpack-build-performance-pitfall-of-using-sass-with-css-modules-ba32f89efdcb)
 
 ## css-in-js
