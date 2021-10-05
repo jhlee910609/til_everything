@@ -56,6 +56,10 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 - media query
 - keyframe animations
 
+### css-in-js tradeoffs
+
+은탄환은 없습니다. css-in-js 방식도 trade-offs가 있습니다.
+
 zero runtime vs build? vs nearly zero runtime
 
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
