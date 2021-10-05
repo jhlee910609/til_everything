@@ -26,7 +26,7 @@ component 기반의 개발 방식에서는 굉장히 중요한 특징입니다.
 
 #### 2. vendor prefix 자동화
 
-- 브라우저에 따라 다른 속성들에 대한 prefix를 기본으로 제공해줍니다. 따라서 개발자는
+- 브라우저에 따라 다른 속성들에 대한 prefix를 기본으로 제공해줍니다. 따라서 개발자는 `transition`만
 
 ```css
 /* WebKit browsers: Chrome, Safari, most iOS browsers, etc */
@@ -45,7 +45,9 @@ component 기반의 개발 방식에서는 굉장히 중요한 특징입니다.
 transition: all 1s ease;
 ```
 
-#### 3. inline-style을 사용하지 않아도 됩니다.
+#### 3. inline-style을 사용하지 않습니다.
+
+css에 비해 javascript inline styles는 성능이 좋지 않습니다.
 
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 
