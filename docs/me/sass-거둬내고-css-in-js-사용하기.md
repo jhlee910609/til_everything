@@ -9,8 +9,8 @@
 `sass-loader`가 느린 이유는 다음과 같습니다.
 
 - `sass-loader`가 트랜스파일한 SASS 파일은 캐시되지 않습니다.
-- 여기서 `CSS Modules`를 활용하여 각각의 component에서 Import하여 sass를 사용했을 경우, stylesheet가 모두 모듈화되어 각각 고유한 sass 프로세스가 되고, 빌드 환경에 따라 그 속도는 더 최악이 될 수 있다고 합니다...😢
-- 실제로 한 회사는 sass와 sass-loader를 제거하고, PostCss와 CSSNext를 도입하여 build 시간을 50%나 줄였다고 합니다.[^1]
+- 여기서 `CSS Modules`를 활용하여 각각의 component에서 Import하여 sass를 사용했을 경우, stylesheet가 모두 모듈화되어 각각 고유한 sass 프로세스가 되고, 빌드 환경에 따라 그 속도는 더 최악이 될 수 있다고 합니다.😢
+- 실제로 한 회사는 `sass`와 `sass-loader`를 제거하고, PostCss와 CSSNext를 도입하여 build 시간을 50%나 줄였다고 합니다.[^1]
 
 ## css-in-js
 
@@ -28,7 +28,7 @@ component 기반의 개발 방식에서는 굉장히 중요한 특징입니다.
 
 #### 2. vendor prefix 자동화를 지원합니다.
 
-- 브라우저에 따라 다른 속성들에 대한 prefix를 기본으로 제공해줍니다. 따라서 개발자는 `transition`만
+- browser에 따라 다른 속성들에 대한 prefix를 기본으로 제공해줍니다. 따라서 개발자는 `transition`만 선언해도 자동으로 vendor prefix를 붙혀줍니다.
 
 ```css
 /* WebKit browsers: Chrome, Safari, most iOS browsers, etc */
@@ -54,9 +54,7 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 
 #### 4. css의 모든 기능을 지원합니다.
 
-- pseudo classes and elements
-- media query
-- keyframe animations
+`pseudo classes`, `elements`, `media query`, `keyframe animations`도 지원합니다.
 
 ### css-in-js tradeoffs
 
