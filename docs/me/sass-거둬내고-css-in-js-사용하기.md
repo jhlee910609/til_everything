@@ -22,6 +22,9 @@
 
 모든 css-in-js 라이브러리들은 `css module`처럼 고유한 css classname을 생성합니다.
 따라서, classname 충돌이나 naming에 크게 신경쓰지 않아도 됩니다.
+component 기반의 개발 방식에서는 굉장히 중요한 특징입니다.
+
+#### 2. vendor prefix 자동화
 
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 
