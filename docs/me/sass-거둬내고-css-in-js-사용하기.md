@@ -4,6 +4,8 @@
 
 ## sass-loader 문제점
 
+> build/rebuild 속도가 너무 느린데, 느린 build 속도의 대부분은 sass-loader였다!
+
 - [Webpack — Build Performance Pitfall of using SASS with CSS Modules | by Will Po | jsdownunder | Medium](https://medium.com/jsdownunder/webpack-build-performance-pitfall-of-using-sass-with-css-modules-ba32f89efdcb)
 
 ## css-in-js
