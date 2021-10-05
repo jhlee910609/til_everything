@@ -26,6 +26,8 @@ component 기반의 개발 방식에서는 굉장히 중요한 특징입니다.
 
 #### 2. vendor prefix 자동화
 
+#### 3. inline-style을 사용하지 않아도 됩니다.
+
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 
 https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/
