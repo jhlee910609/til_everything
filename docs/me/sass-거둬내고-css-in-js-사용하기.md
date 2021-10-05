@@ -4,7 +4,9 @@
 
 ## sass-loader 문제점
 
-> build/rebuild 속도가 너무 느린데, 느린 build 속도의 대부분은 sass-loader였다!
+> webpack의 build/rebuild 속도가 너무 느린데, 느린 build 속도의 대부분은 sass-loader에서 병목이 발생하였습니다!
+
+`sass-loader`가 느린 이유는 다음과 같습니다.
 
 - `sass-loader`가 트랜스파일한 SASS 파일은 캐시되지 않습니다.
 - 여기서 `CSS Modules`를 활용하여 각각의 component에서 Import하여 sass를 사용했을 경우, stylesheet가 모두 모듈화되어 각각 고유한 sass 프로세스가 되고, 빌드 환경에 따라 그 속도는 더 최악이 될 수 있다고 합니다...😢
