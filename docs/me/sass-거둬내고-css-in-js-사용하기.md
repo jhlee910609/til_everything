@@ -12,6 +12,8 @@
 
 ## css-in-js
 
+> 별도의 style file 형식이 아닌 javascript 코드 내에서 css를 작성하는 방식
+
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 
 https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/
