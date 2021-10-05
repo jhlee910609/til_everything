@@ -18,6 +18,11 @@
 
 ### css-in-js의 공통적인 특징
 
+#### 1. scoped css
+
+모든 css-in-js 라이브러리들은 `css module`처럼 고유한 css classname을 생성합니다.
+따라서, classname 충돌이나 naming에 크게 신경쓰지 않아도 됩니다.
+
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 
 https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/
