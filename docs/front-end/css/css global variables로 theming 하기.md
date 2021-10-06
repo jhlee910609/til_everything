@@ -23,7 +23,7 @@
 
 ### css global variables[^2]
 
-- `var()`를 사용하여 값(value) 대신 변수를 넣는 css 함수입니다.
+- `var()`를 사용하여 값(value) 대신 변수를 넣는 css 함수입니다. 이는 w3c 공식 문서[^3]에 소개되어 있습니다.
 - 보통 constants style value들을 global하게 선언해두고 사용합니다.
 - 위 특성들을 활용하여, theming을 하기도 합니다.
 
@@ -35,3 +35,4 @@
 
 [^1]: [css-modules/css-modules: Documentation about css-modules](https://github.com/css-modules/css-modules)
 [^2]: [CSS Variables - The var() function](https://www.w3schools.com/css/css3_variables.asp)
+[^3]: [CSS Functions Reference](https://www.w3schools.com/cssref/css_functions.asp)
