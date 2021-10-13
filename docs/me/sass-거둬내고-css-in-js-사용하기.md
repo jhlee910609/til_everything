@@ -67,9 +67,11 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 
 ### css-in-js tradeoffs
 
-> 은탄환은 없습니다. `css-in-js` 방식도 trade-offs가 있습니다.
+> 은탄환은 없습니다. `css-in-js` 방식도 몇 가지 trade-offs가 있습니다.
 
-`css-in-js`는 js 파일 안에 style을 정의하는 방식입니다. `css-in-js`은 runtime에 style을 불러옵니다.
+1. emotionjs, styled-component와 같은 js library에 종속적이기 때문에 js가 구동되지 않는 환경에서는 스타일을 사용할 수 없습니다.
+2. style이 두 번 parsing 됩니다. 첫 번째는 css-in-js library에 의해, 두 번째는 browser에 의해 parsing 됩니다.
+3. 보통 web page가 loading 될 때,
 
 zero runtime vs build? vs nearly zero runtime
 
