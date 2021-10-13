@@ -65,17 +65,19 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 
 `pseudo classes`, `elements`, `media query`, `keyframe animations`도 지원합니다.
 
-### css-in-js tradeoffs
+### css-in-js trade-offs
 
-> 은탄환은 없습니다. `css-in-js` 방식도 몇 가지 trade-offs가 있습니다.
+> 은탄환은 없습니다. `css-in-js` 방식도 몇 가지 trade-off가 있습니다.
 
-1. emotionjs, styled-component와 같은 js library에 종속적이기 때문에 js가 구동되지 않는 환경에서는 스타일을 사용할 수 없습니다.
+1. `emotionjs`, `styled-component`와 같은 js library에 종속적이기 때문에 js가 구동되지 않는 환경에서는 스타일을 사용할 수 없습니다.
 2. style이 두 번 parsing 됩니다. 첫 번째는 css-in-js library에 의해, 두 번째는 browser에 의해 parsing 됩니다.
 3. 보통 web page가 loading 될 때, browser는 CSS를 읽고 적용합니다. 하지만 css-in-js를 사용한다면, browser는 동적으로 CSS style tag를 생성하고, webpage에 적용합니다. 따라서 style을 동적으로 읽고, 생성하는 것에 동작 시간이 소요됩니다.
 
+##### zero-runtime css-in-js
+
 위와 같은 몇 가지 trade-off가 있고, 특히 3번 같은 경우를 runtime에 style이 결정되어, css-in-js 방식 중 runtime 방식이라고 일컫습니다.
 runtime 방식은 3번에서 말한 것처럼 동적으로 style이 결정됨에 따라 render가 빈번하게 일어나는 상황일 경우, 성능 저하의 가능성이 큼을 예상해볼 수 있는데요.
-이를 개선한 것이 zero runtime css-in-js 입니다.
+이를 개선한 것이 zero runtime css-in-js 입니다. 기존 방식 중에 css module import 방식이 zero runtime 방식입니다.
 
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/
