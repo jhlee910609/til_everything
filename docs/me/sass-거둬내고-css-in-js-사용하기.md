@@ -67,12 +67,13 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 
 ### css-in-js tradeoffs
 
-은탄환은 없습니다. css-in-js 방식도 trade-offs가 있습니다.
+> 은탄환은 없습니다. `css-in-js` 방식도 trade-offs가 있습니다.
+
+`css-in-js`는 js 파일 안에 style을 정의하는 방식입니다. `css-in-js`은 runtime에 style을 불러옵니다.
 
 zero runtime vs build? vs nearly zero runtime
 
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
-
 https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/
 https://so-so.dev/web/css-in-js-whats-the-defference/#css-in-js
 https://github.com/seek-oss/vanilla-extract#style
