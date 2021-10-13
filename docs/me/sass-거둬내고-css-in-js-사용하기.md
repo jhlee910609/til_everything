@@ -78,13 +78,11 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 위와 같은 몇 가지 trade-off가 있고, 특히 3번 같은 경우를 runtime에 style이 결정되어, css-in-js 방식 중 runtime 방식이라고 일컫습니다.
 runtime 방식은 3번에서 말한 것처럼 동적으로 style이 결정됨에 따라 render가 빈번하게 일어나는 상황일 경우, 성능 저하의 가능성이 큼을 예상해볼 수 있는데요.
 이를 개선한 것이 zero runtime css-in-js 입니다. 기존 방식 중에 css module import 방식이 zero runtime 방식입니다.
-zero-runtime css-in-js 방식은 build 시점에 style을 생성하는데요. zero-runtime css-in-js 방식으로 개발된 대표적인 library linaria의 [linaria/HOW_IT_WORKS.md](https://github.com/callstack/linaria/blob/master/docs/HOW_IT_WORKS.md)를 보면 그 원리를 자세히 알 수 있습니다. 간단히 동적으로 선언된 style들을 build 시점에 babel-loader와 plugin을 활용하여 `css global variable`로 변수 할당을 통해 CSS로 추출됩니다. 따라서
+zero-runtime css-in-js 방식은 build 시점에 style을 생성하는데요. zero-runtime css-in-js 방식으로 개발된 대표적인 library linaria의 [linaria/HOW_IT_WORKS.md](https://github.com/callstack/linaria/blob/master/docs/HOW_IT_WORKS.md)를 보면 그 원리를 자세히 알 수 있습니다. 간단히 동적으로 선언된 style들을 build 시점에 babel-loader와 plugin을 활용하여 `css global variable`로 변수 할당을 통해 CSS로 추출됩니다. 따라서, CSS 파일 크기는 조금 커질 수 있지만, 한 번 style load 후, 동적인 연산이 적게 되는 이점이 있습니다.
 
 https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
 https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/
 https://so-so.dev/web/css-in-js-whats-the-defference/#css-in-js
-https://github.com/seek-oss/vanilla-extract#style
-https://stitches.dev
 https://jxnblk.com/blog/why-you-should-learn-css-in-js/
 
 [^1]: [Webpack — Build Performance Pitfall of using SASS with CSS Modules | by Will Po | jsdownunder | Medium](https://medium.com/jsdownunder/webpack-build-performance-pitfall-of-using-sass-with-css-modules-ba32f89efdcb)
