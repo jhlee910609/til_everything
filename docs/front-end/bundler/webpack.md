@@ -1,37 +1,29 @@
-# webpack
+# webpack이란?
 
-## webpack 설정 톺아보기
+## bundler란?
 
-> bundling이 왜 필요할까?
+webpack은 parcel, rollupjs 등 다양한 종류의 bundler 중 하나입니다. 그럼 bunlder 왜 필요할까요?
 
 - JavaScript는 모듈 자체적으로 모듈을 지원하지 않습니다.
 - 웹 서비스 구조가 복잡해짐에 따라 코드 구조화, 모듈화가 필요해졌습니다. 따라서 `CommonJS`, `AMD(Asynchronous Module Definition)` 를 걸쳐 현재 가장 많이 사용되는 ESM(ES Module)와 같은 모듈 시스템이 생기게 되었씁니다.
-- 브라우저는 모듈 시스템을 지원하지 않기 때문에 웹팩과 같은 번들러를 이용해 모듈화된 코드를 브라우저에서 실행할 수 있는 정적파일 형태로 변환시켜야 합니다. 단, 현재는 대부분의 브라우저가 ESM을 자체지원합니다.
+- 브라우저는 모듈 시스템을 지원하지 않기 때문에 웹팩과 같은 번들러를 이용해 모듈화된 코드를 브라우저에서 실행할 수 있는 정적파일 형태로 변환시켜야 합니다. 단, 현재는 대부분의 브라우저가 `ESM`을 자체지원합니다.
 
-## 웹팩 기능 및 개념
+## webpack 기능 및 개념
 
-Entry
-모듈에 관한 의존성 그래프를 만들고 하나의 파일로 만들기 위한 시작 파일을 지정하기 위한 옵션
+### Entry
+
+모듈에 관한 의존성 그래프를 만들고 하나의 파일로 만들기 위한 시작 파일을 지정하기 위한 옵션입니다.
 
 ```json
 entry: {
-'design/canvas': ['./src/editor/main/router/controller/MainRouteController.ts'], // 에디터
-'design/canvas1': './src/editor/css/unicorn1.scss', // 기본값
-'design/canvas4': './src/editor/css/unicorn4.scss', // 다크
-
-        'launcher/launcher': './src/shared/main/launcher/controller/LauncherController.ts', // 미리캔버스 실행기
-        'launcher/launcherpage': './src/shared/main/launcher/controller/LauncherPageController.ts', // 미리캔버스 실행기로 열리는 런처 페이지 스크립트
-
-        // 워크스페이스
-        'workspace/workspace': ['./src/workspace/main/controller/WorkspaceRouteController.ts'],
-        'workspace/workspace1': ['./src/workspace/main/view/workspace1.scss'],
-        'workspace/workspace4': ['./src/workspace/main/view/workspace4.scss'],
+'**/entryPath1': ['./src/path/to/entry1.ts', './src/path/to/entry1.scss'], // 에디터
     	// ...
     },
 ```
 
-Output
-번들된 파일의 위치, 이름 등 기타 설정에 관한 옵션
+### Output
+
+번들된 파일의 위치, 이름 등 기타 설정에 관한 옵션입니다. 아래와 같이 설정할 경우, `/build/libs/` 경로에 스크립트 파일이 결과물로 만들어져 있습니다.
 
 ```json
 output: {
@@ -42,8 +34,6 @@ chunkFilename: isLocalDev ? "[name].chunk.js" : "[chunkhash].chunk.js",
 filename: '[name].js'
 },
 ```
-
-아래 처럼 /build/libs/ 경로에 스크립트 파일이 결과물로 만들어져 있다.
 
 Loader  (Loader랑 plugin이랑 도대체 뭐가 다를까? )
 여러 파일 형식을 모듈로 사용할 수 있도록 변환하는 옵션
