@@ -39,8 +39,8 @@ filename: '[name].js'
 
 여러 파일 형식을 모듈로 사용할 수 있도록 변환하는 옵션입니다.
 
-- test: 설정값은 어떤 파일을 처리할지 지정합니다.
-- use: 설정값은 어떻게 처리할지를 결정합니다.
+- test: 어떤 파일을 처리할지 지정합니다.
+- use: 어떤 로더를 사용하여 어떻게 처리할지를 결정합니다.
 
 1.  babel-loader
 
@@ -159,5 +159,4 @@ https://survivejs.com/webpack/optimizing/performance/
 
 ```
 
-[^1]:
-    [JavaScript modules - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules)
+[^1]: [JavaScript modules - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules)
