@@ -50,10 +50,8 @@ filename: '[name].js'
       ![caniuse](../../../attachments/2021-10-14-21-36-54.png)
       ex) IE 11 등 오래된 브라우저는 ES6을 지원하지 않는습니다. 따라서 babel-loader가 ES3 기준으로 Javascript를 transpiling이 필요합니다.
 
-      babel-loader에 대표적으로 jsx 관련 플러그인이 있다.
-
-    babel-plugin-transform-react-jsx
-    jsx → js transpiling
+    - babel-loader에 대표적으로 jsx 관련 플러그인이 있습니다.
+      ex) babel-plugin-transform-react-jsx, jsx → js transpiling
 
 2.  sass-loader
 
