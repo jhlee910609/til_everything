@@ -35,7 +35,7 @@ filename: '[name].js'
 },
 ```
 
-### Loader  (Loader랑 plugin이랑 도대체 뭐가 다를까? )
+### Loader(Loader랑 plugin이랑 도대체 뭐가 다를까? )
 
 여러 파일 형식을 모듈로 사용할 수 있도록 변환하는 옵션입니다.
 
@@ -55,53 +55,56 @@ filename: '[name].js'
     babel-plugin-transform-react-jsx
     jsx → js transpiling
 
-sass-loader
-_.scss File →  _.css File로 컴파일해주며, js에 module로써 import를 가능하게 해준다.
-css-loader
- \*.css file을 module로써 js에 Import (load) 할 수 있다.
-Plugin
-Loader는 모듈화에 대한 처리를 하는 반면 Plugin은 그외 다양한 처리를 할 수 있다.
-빌드 결과물에 대한 처리(번들 최적화), 환경변수 주입, 빌드 과정에 대한 처리.
-ForkTsCheckerWebpackPlugin
-TypeScript를 처리할 수 있는 방법은 두가지이다.
-tsloader 이용하여 타입 정의 파일, 정적 타입 체킹을 빌드시에 같이 하기
-tsloader에 transpileOnly 옵션을 주거나, babel-loader를 사용하는 경우 TypeScript 처리해주는 플러그인을 사용하여 transpiling 만 하도록 하고, ForkTsCheckerWebpackPlugin을 사용하여 별도의 쓰레드에서 타입 체킹하게 한다.
-프로젝트가 규모가 커질수록 빌드 시간이 오래걸리므로 이 방법을 권장한다.
-HtmlWebpackPlugin
-웹팩으로 만들어진 번들을 서빙하기위한 HTML파일을 생성해준다. 해시값등 가변적인 HTML 파일 이름을 사용해야하는 경우에 쓴다.
-아래처럼 ejs 템플릿 파일 경로와 결과 파일 이름을 플러그인에 제공하면 플러그인이 자체 제공하는 ejs 템플릿 엔진으로 HTML파일을 만들어 준다.
-module.exports = {
-getView: (param) => {
-const outputEntryList = [];
-// 메인페이지
-outputEntryList.push({
-filename: 'main/main.html',
-template: 'src/homepage/web/main/controller/main.ejs',
-data: {
-buildHash: param.buildHash
-}
-});
+2.  sass-loader
 
-        // 워크스페이스 페이지
-        outputEntryList.push({
-            filename: 'workspace/workspace.html',
-            template: 'src/workspace/main/view/workspace.ejs',
-            data: {
-                buildHash: param.buildHash
-            }
-        });
+- `_.scss File` →  `_.css` File로 컴파일해주며, js에 module로써 import를 가능하게 해줍니다.
 
-        // 템플릿 페이지
-        outputEntryList.push({
-            filename: 'templates/templates.html',
-            template: 'src/homepage/web/templates/view/templates.ejs',
-            data: {}
-        });
+3. css-loader
 
-    	...
+- `\*.css` file을 module로써 js에 Import (load) 할 수 있다.
+  Plugin
+  Loader는 모듈화에 대한 처리를 하는 반면 Plugin은 그외 다양한 처리를 할 수 있다.
+  빌드 결과물에 대한 처리(번들 최적화), 환경변수 주입, 빌드 과정에 대한 처리.
+  ForkTsCheckerWebpackPlugin
+  TypeScript를 처리할 수 있는 방법은 두가지이다.
+  tsloader 이용하여 타입 정의 파일, 정적 타입 체킹을 빌드시에 같이 하기
+  tsloader에 transpileOnly 옵션을 주거나, babel-loader를 사용하는 경우 TypeScript 처리해주는 플러그인을 사용하여 transpiling 만 하도록 하고, ForkTsCheckerWebpackPlugin을 사용하여 별도의 쓰레드에서 타입 체킹하게 한다.
+  프로젝트가 규모가 커질수록 빌드 시간이 오래걸리므로 이 방법을 권장한다.
+  HtmlWebpackPlugin
+  웹팩으로 만들어진 번들을 서빙하기위한 HTML파일을 생성해준다. 해시값등 가변적인 HTML 파일 이름을 사용해야하는 경우에 쓴다.
+  아래처럼 ejs 템플릿 파일 경로와 결과 파일 이름을 플러그인에 제공하면 플러그인이 자체 제공하는 ejs 템플릿 엔진으로 HTML파일을 만들어 준다.
+  module.exports = {
+  getView: (param) => {
+  const outputEntryList = [];
+  // 메인페이지
+  outputEntryList.push({
+  filename: 'main/main.html',
+  template: 'src/homepage/web/main/controller/main.ejs',
+  data: {
+  buildHash: param.buildHash
+  }
+  });
 
-        return outputEntryList;
-    }
+          // 워크스페이스 페이지
+          outputEntryList.push({
+              filename: 'workspace/workspace.html',
+              template: 'src/workspace/main/view/workspace.ejs',
+              data: {
+                  buildHash: param.buildHash
+              }
+          });
+
+          // 템플릿 페이지
+          outputEntryList.push({
+              filename: 'templates/templates.html',
+              template: 'src/homepage/web/templates/view/templates.ejs',
+              data: {}
+          });
+
+      	...
+
+          return outputEntryList;
+      }
 
 };
 
