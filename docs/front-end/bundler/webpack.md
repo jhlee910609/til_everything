@@ -35,7 +35,7 @@ filename: '[name].js'
 },
 ```
 
-### Loader(Loader랑 plugin이랑 도대체 뭐가 다를까? )
+## Loader(Loader랑 plugin이랑 도대체 뭐가 다를까? )
 
 여러 파일 형식을 모듈로 사용할 수 있도록 변환하는 옵션입니다.
 
@@ -60,17 +60,21 @@ filename: '[name].js'
 3. css-loader
 
 - `\*.css` file을 module로써 js에 Import (load) 할 수 있다.
-  Plugin
-  Loader는 모듈화에 대한 처리를 하는 반면 Plugin은 그외 다양한 처리를 할 수 있다.
-  빌드 결과물에 대한 처리(번들 최적화), 환경변수 주입, 빌드 과정에 대한 처리.
-  ForkTsCheckerWebpackPlugin
-  TypeScript를 처리할 수 있는 방법은 두가지이다.
-  tsloader 이용하여 타입 정의 파일, 정적 타입 체킹을 빌드시에 같이 하기
-  tsloader에 transpileOnly 옵션을 주거나, babel-loader를 사용하는 경우 TypeScript 처리해주는 플러그인을 사용하여 transpiling 만 하도록 하고, ForkTsCheckerWebpackPlugin을 사용하여 별도의 쓰레드에서 타입 체킹하게 한다.
-  프로젝트가 규모가 커질수록 빌드 시간이 오래걸리므로 이 방법을 권장한다.
-  HtmlWebpackPlugin
-  웹팩으로 만들어진 번들을 서빙하기위한 HTML파일을 생성해준다. 해시값등 가변적인 HTML 파일 이름을 사용해야하는 경우에 쓴다.
-  아래처럼 ejs 템플릿 파일 경로와 결과 파일 이름을 플러그인에 제공하면 플러그인이 자체 제공하는 ejs 템플릿 엔진으로 HTML파일을 만들어 준다.
+
+## Plugin
+
+Loader는 모듈화에 대한 처리를 하는 반면 Plugin은 그외 다양한 처리를 할 수 있습니다. 특히 빌드 결과물에 대한 처리(번들 최적화), 환경변수 주입, 빌드 과정에 대한 처리를 도와줍니다.
+
+1. ForkTsCheckerWebpackPlugin
+   TypeScript를 처리할 수 있는 방법은 두 가지 입니다.
+
+- `ts-loader` 이용하여 타입 정의 파일, 정적 타입 체킹을 빌드 시에 같이 하게 합니다.
+- `ts-loader`에 `transpileOnly` 옵션을 주거나, `babel-loader`를 사용하는 경우, TypeScript 처리해주는 플러그인을 사용하여 transpiling 만 하도록 하고, `ForkTsCheckerWebpackPlugin`을 사용하여 별도의 쓰레드에서 타입 체킹하게 합니다. 프로젝트가 규모가 커질수록 빌드 시간이 오래걸리므로 이 방법을 권장합니다.
+
+2. HtmlWebpackPlugin
+   웹팩으로 만들어진 번들을 서빙하기위한 HTML파일을 생성해줍니다. 해시 값 등 가변적인 HTML 파일 이름을 사용해야하는 경우에 사용합니다. 아래처럼 `ejs` 템플릿 파일 경로와 결과 파일 이름을 플러그인에 제공하면 플러그인이 자체 제공하는 `ejs` 템플릿 엔진으로 HTML파일을 만들어 줍니다.
+
+```json
   module.exports = {
   getView: (param) => {
   const outputEntryList = [];
@@ -82,6 +86,7 @@ filename: '[name].js'
   buildHash: param.buildHash
   }
   });
+
 
           // 워크스페이스 페이지
           outputEntryList.push({
@@ -114,6 +119,7 @@ templateParameters: (compilation, assets, options) => ejsEntry.data != null ? ej
 inject: false,
 }));
 });
+```
 
 아래처럼 나온다.
 
