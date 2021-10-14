@@ -2,11 +2,11 @@
 
 ## bundler란?
 
-webpack은 parcel, rollupjs 등 다양한 종류의 bundler 중 하나입니다. 그럼 bunlder 왜 필요할까요?
+webpack은 parcel, rollupjs 등 다양한 종류의 bundler 중 하나입니다. 그럼 bundler는 무엇이고, 왜 필요할까요?
 
 - JavaScript는 모듈 자체적으로 모듈을 지원하지 않습니다.
 - 웹 서비스 구조가 복잡해짐에 따라 코드 구조화, 모듈화가 필요해졌습니다. 따라서 `CommonJS`, `AMD(Asynchronous Module Definition)` 를 걸쳐 현재 가장 많이 사용되는 ESM(ES Module)와 같은 모듈 시스템이 생기게 되었씁니다.
-- 브라우저는 모듈 시스템을 지원하지 않기 때문에 웹팩과 같은 번들러를 이용해 모듈화된 코드를 브라우저에서 실행할 수 있는 정적파일 형태로 변환시켜야 합니다. 단, 현재는 대부분의 브라우저가 `ESM`을 자체지원합니다.
+- 브라우저는 모듈 시스템을 지원하지 않기 때문에 웹팩과 같은 번들러를 이용해 모듈화된 코드를 브라우저에서 실행할 수 있는 정적파일 형태로 변환시켜야 합니다. 단, 현재는 대부분의 브라우저가 `ESM`을 자체지원합니다.[^1]
 
 ## webpack 기능 및 개념
 
@@ -42,16 +42,18 @@ filename: '[name].js'
 - test: 설정값은 어떤 파일을 처리할지 지정합니다.
 - use: 설정값은 어떻게 처리할지를 결정합니다.
 
-1. babel-loader
-   - `JavaScript` 처리에 많이 쓰이는 loader는 `babel-loader`가 있습니다.
-   - `babel-loader`는 `TypeScript`, `Javascript` 변환, 브라우저 호환용 타깃 지정 등의 다양한 기능을 갖고 있습니다.
-     브라우저 호환 기능이 왜 필요할까? 다음의 상황을 예시로 보자:
-     ![caniuse](../../../attachments/2021-10-14-21-36-54.png)
-     ex) IE 11 등 오래된 브라우저는 ES6을 지원하지 않는다, 따라서 babel-loader가 ES3 기준으로 Javascript를 transpiling 해줘야한다.
+1.  babel-loader
 
-babel-loader에 대표적으로 jsx 관련 플러그인이 있다.
-babel-plugin-transform-react-jsx
-jsx → js transpiling
+    - `JavaScript` 처리에 많이 쓰이는 loader는 `babel-loader`가 있습니다.
+    - `babel-loader`는 `TypeScript`, `Javascript` 변환, 브라우저 호환용 타깃 지정 등의 다양한 기능을 갖고 있습니다.
+    - 그럼 브라우저 호환 기능이 왜 필요할까요? 다음의 상황을 예시를 보면 쉽게 이해할 수 있습니다.
+      ![caniuse](../../../attachments/2021-10-14-21-36-54.png)
+      ex) IE 11 등 오래된 브라우저는 ES6을 지원하지 않는습니다. 따라서 babel-loader가 ES3 기준으로 Javascript를 transpiling이 필요합니다.
+
+      babel-loader에 대표적으로 jsx 관련 플러그인이 있다.
+
+    babel-plugin-transform-react-jsx
+    jsx → js transpiling
 
 sass-loader
 _.scss File →  _.css File로 컴파일해주며, js에 module로써 import를 가능하게 해준다.
@@ -156,3 +158,6 @@ https://survivejs.com/webpack/optimizing/performance/
 ```
 
 ```
+
+[^1]:
+    [JavaScript modules - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules)
