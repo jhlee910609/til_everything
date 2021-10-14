@@ -35,15 +35,19 @@ filename: '[name].js'
 },
 ```
 
-Loader  (Loader랑 plugin이랑 도대체 뭐가 다를까? )
-여러 파일 형식을 모듈로 사용할 수 있도록 변환하는 옵션
-test 설정값은 어떤 파일을 처리할지 지정한다.
-use 설정값은 어떻게 처리할지를 결정 (loader)
-babel-loader
-JavaScript 처리에 많이 쓰이는 loader는 babel-loader가 있다.
-babel-loader는 TypeScript, Javascript 변환, 브라우저 호환용 타깃 지정등의 기능을 갖고있다.
-브라우저 호환 기능이 왜 필요할까? 다음의 상황을 예시로 보자:
-ex) IE 11 등 오래된 브라우저는 ES6을 지원하지 않는다, 따라서 babel-loader가 ES3 기준으로 Javascript를 transpiling 해줘야한다.
+### Loader  (Loader랑 plugin이랑 도대체 뭐가 다를까? )
+
+여러 파일 형식을 모듈로 사용할 수 있도록 변환하는 옵션입니다.
+
+- test: 설정값은 어떤 파일을 처리할지 지정합니다.
+- use: 설정값은 어떻게 처리할지를 결정합니다.
+
+1. babel-loader
+   - `JavaScript` 처리에 많이 쓰이는 loader는 `babel-loader`가 있습니다.
+   - `babel-loader`는 `TypeScript`, `Javascript` 변환, 브라우저 호환용 타깃 지정 등의 다양한 기능을 갖고 있습니다.
+     브라우저 호환 기능이 왜 필요할까? 다음의 상황을 예시로 보자:
+     ![caniuse](../../../attachments/2021-10-14-21-36-54.png)
+     ex) IE 11 등 오래된 브라우저는 ES6을 지원하지 않는다, 따라서 babel-loader가 ES3 기준으로 Javascript를 transpiling 해줘야한다.
 
 babel-loader에 대표적으로 jsx 관련 플러그인이 있다.
 babel-plugin-transform-react-jsx
