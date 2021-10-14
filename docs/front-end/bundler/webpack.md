@@ -80,56 +80,34 @@ Loader는 모듈화에 대한 처리를 하는 반면 Plugin은 그외 다양한
   const outputEntryList = [];
   // 메인페이지
   outputEntryList.push({
-  filename: 'main/main.html',
-  template: 'src/homepage/web/main/controller/main.ejs',
-  data: {
-  buildHash: param.buildHash
-  }
+    filename: 'main/main.html',
+    template: 'src/main.ejs',
+    data: {
+        buildHash: param.buildHash
+    }
   });
-
-
-          // 워크스페이스 페이지
-          outputEntryList.push({
-              filename: 'workspace/workspace.html',
-              template: 'src/workspace/main/view/workspace.ejs',
-              data: {
-                  buildHash: param.buildHash
-              }
-          });
-
-          // 템플릿 페이지
-          outputEntryList.push({
-              filename: 'templates/templates.html',
-              template: 'src/homepage/web/templates/view/templates.ejs',
-              data: {}
-          });
-
-      	...
-
+        // ...
           return outputEntryList;
       }
 
 };
 
-viewConfig.getView({}).forEach(ejsEntry => {
-plugins.push(new HtmlWebpackPlugin({
-filename: (ejsEntry.outputLibs === true ? '' : '../views/') + ejsEntry.filename,
-template: ejsEntry.template,
-templateParameters: (compilation, assets, options) => ejsEntry.data != null ? ejsEntry.data : {},
+    viewConfig.getView({}).forEach(ejsEntry => {
+    plugins.push(new HtmlWebpackPlugin({
+    filename: (ejsEntry.outputLibs === true ? '' : '../views/') + ejsEntry.filename,
+    template: ejsEntry.template,
+    templateParameters: (compilation, assets, options) => ejsEntry.data != null ? ejsEntry.data : {},
 inject: false,
 }));
 });
 ```
 
-아래처럼 나온다.
+3. MiniCSSExtractPlugin
+   css file이 js에 Import 되어 사용될 경우(css module import), on-demand로 css file load 가능합니다.
 
-MiniCSSExtractPlugin
-css file이 js에 Import 되어 사용될 경우(css module import), on-demand로 css file load 가능
+## 웹팩 성능 개선하기
 
-웹팩 성능 개선
-에디터 개발 환경설정 재정비(WIP)
 https://webpack.js.org/guides/build-performance/
-가능하면 최신 버전의 웹팩을 사용하기
 https://webpack.js.org/blog/2020-10-10-webpack-5-release/#persistent-caching
 로더를 필요한 디렉토리에서만 사용하기
 빌드 결과물 크기를 줄이기
