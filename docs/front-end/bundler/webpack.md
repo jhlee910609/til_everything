@@ -140,8 +140,4 @@ babel-loader을 사용하는 경우 built-in caching
 https://blog.box.com/how-we-improved-webpack-build-performance-95
 https://survivejs.com/webpack/optimizing/performance/
 
-```
-
-```
-
-[^1]: [JavaScript modules - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules)
+[^1]: [JavaScript modules - JavaScript](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules)
