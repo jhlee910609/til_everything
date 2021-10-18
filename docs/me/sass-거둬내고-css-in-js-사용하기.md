@@ -87,5 +87,5 @@ zero-runtime css-in-js 방식은 build 시점에 style을 생성하는데요. ze
 - https://so-so.dev/web/css-in-js-whats-the-defference/#css-in-js
 - https://jxnblk.com/blog/why-you-should-learn-css-in-js/
 
-[^1]: [Webpack — Build Performance Pitfall of using SASS with CSS Modules | by Will Po | jsdownunder | Medium](https://medium.com/jsdownunder/webpack-build-performance-pitfall-of-using-sass-with-css-modules-ba32f89efdcb)
-[^2]: [External CSS vs inline style performance difference? | NewbedevMenu](https://newbedev.com/external-css-vs-inline-style-performance-difference)
+[^1]: [Webpack — Build Performance Pitfall of using SASS with CSS Modules](https://medium.com/jsdownunder/webpack-build-performance-pitfall-of-using-sass-with-css-modules-ba32f89efdcb)
+[^2]: [External CSS vs inline style performance difference?](https://newbedev.com/external-css-vs-inline-style-performance-difference)
