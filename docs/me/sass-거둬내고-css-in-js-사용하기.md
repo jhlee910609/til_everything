@@ -73,7 +73,7 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 2. style이 두 번 parsing 됩니다. 첫 번째는 css-in-js library에 의해, 두 번째는 browser에 의해 parsing 됩니다.
 3. 보통 web page가 loading 될 때, browser는 CSS를 읽고 적용합니다. 하지만 css-in-js를 사용한다면, browser는 동적으로 CSS style tag를 생성하고, webpage에 적용합니다. 따라서 style을 동적으로 읽고, 생성하는 것에 동작 시간이 소요됩니다.
 
-##### zero-runtime css-in-js
+### zero-runtime css-in-js
 
 위와 같은 몇 가지 trade-off가 있고, 특히 3번 같은 경우를 runtime에 style이 결정되어, css-in-js 방식 중 runtime 방식이라고 일컫습니다.
 runtime 방식은 3번에서 말한 것처럼 동적으로 style이 결정됨에 따라 render가 빈번하게 일어나는 상황일 경우, 성능 저하의 가능성이 큼을 예상해볼 수 있는데요.
@@ -82,10 +82,10 @@ zero-runtime css-in-js 방식은 build 시점에 style을 생성하는데요. ze
 
 ##### 참고문서
 
-- https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586
-- https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/
-- https://so-so.dev/web/css-in-js-whats-the-defference/#css-in-js
-- https://jxnblk.com/blog/why-you-should-learn-css-in-js/
+- [Better CSS-in-JS performance with zero runtime - 🙋Get Help - Frontity Community Forum](https://community.frontity.org/t/better-css-in-js-performance-with-zero-runtime/3586)
+- [Comparing the top zero-runtime CSS-in-JS libraries - LogRocket Blog](https://blog.logrocket.com/comparing-the-top-zero-runtime-css-in-js-libraries/)
+- [CSS-in-JS, 무엇이 다른가요? | SOSOLOG](https://so-so.dev/web/css-in-js-whats-the-defference/#css-in-js)
+- [Why you should definitely learn how to use CSS-in-JS | Jxnblk](https://jxnblk.com/blog/why-you-should-learn-css-in-js/)
 
 [^1]: [Webpack — Build Performance Pitfall of using SASS with CSS Modules](https://medium.com/jsdownunder/webpack-build-performance-pitfall-of-using-sass-with-css-modules-ba32f89efdcb)
 [^2]: [External CSS vs inline style performance difference?](https://newbedev.com/external-css-vs-inline-style-performance-difference)
