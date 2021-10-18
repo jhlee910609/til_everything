@@ -20,4 +20,4 @@ execution context는 실행 가능한 코드를 형상화하고, 구분하는 �
 - 변수의 유효범위(scope)
 - this
 
-[^1]: [eval() - JavaScript | MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)
+[^1]: [eval() - JavaScript - MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)
