@@ -20,6 +20,32 @@ global context는 function 밖의 context를 의미합니다. strict mode냐 slo
 
 function context는 function 내부의 context를 의미합니다. 이는 function이 어떻게 호출되느냐에 따라 동적으로 정해집니다.
 
+- sloppy mode
+  - sloppy mode에서는 this의 기본 값으로 global object를 참조하고 있습니다.
+
+```javascript
+function f1() {
+  return this;
+}
+
+// In a browser:
+f1() === window; // true
+
+// In Node:
+f1() === globalThis; // true
+```
+
+- ## strict mode
+
+```javascript
+function f1() {
+  "use strict";
+  return this;
+}
+
+f1() === undefined; // true
+```
+
 [^1]: [[sloppy-mode-vs-strict-mode]]
 [^2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [^3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
