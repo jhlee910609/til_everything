@@ -5,7 +5,12 @@
 javascript 함수의 this 키워드는 다른 언어와 다르게 동작합니다. 또한, javascript의 strict mode와 sloppy mode[^1]에서도 다르게 동작합니다.
 
 대부분의 상황에서는 함수가 어떻게 호출되었느냐에 따라 this의 값이 결정됩니다. 함수가 선언될 때, this가 결정되는 것이 아니라 함수가 호출될때마다 this의 값은 달라집니다.
-ES5에서는 `bind()`[^2] 메서드를 소개했고, ES2015에서는 arrow function[^3]을 소개하였습니다.
+
+ES5에서는 `bind()`[^2] 메서드를 도입했고, ES2015에서는 자체 this 바인딩을 제공하지 않는 화살표 함수(arrow function[^3])를 도입했습니다. (이는 둘러싸는 어휘 컨텍스트(lexical context)의 this 값을 유지합니다).
+
+## Value
+
+sloppy mode에서는 this의 값은
 
 [^1]: [[sloppy-mode-vs-strict-mode]]
 [^2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
