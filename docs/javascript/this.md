@@ -35,7 +35,9 @@ f1() === window; // true
 f1() === globalThis; // true
 ```
 
-- ## strict mode
+- strict mode
+  - execution context 진입 시, 별도의 binding된 this가 없다면 `undefined` 상태 그대로 set 됩니다.
+  - `call`, `apply` 함수를 활용하여 this를 binding하여 사용합니다.
 
 ```javascript
 function f1() {
