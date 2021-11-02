@@ -16,7 +16,9 @@ sloppy mode에서는 this의 값은 execution context[^4](global, function, eval
 
 global context는 function 밖의 context를 의미합니다. strict mode냐 sloppy mode와 상관없이 global object를 참조합니다. 따라서, 브라우저 상에서는 `window` 객체를 항상 참조하고 있습니다.
 
-###
+### function context
+
+function context는 function 내부의 context를 의미합니다. 이는 function이 어떻게 호출되느냐에 따라 동적으로 정해집니다.
 
 [^1]: [[sloppy-mode-vs-strict-mode]]
 [^2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
