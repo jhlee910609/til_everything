@@ -2,17 +2,19 @@
 ---
 
 @import "{{ site.theme }}";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 @font-face {
-  font-family: "RIDIBatang";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+  // font-family: "RIDIBatang";
+  // src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+  //   format("woff");
+  // font-weight: normal;
+  // font-style: normal;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 html * {
-  font-family: "RIDIBatang";
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 .markdown-body {
@@ -41,7 +43,7 @@ h4,
 h5,
 a,
 blockquote {
-  font-family: "RIDIBatang", Constantia, "Lucida Bright", Lucidabright,
-    "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+  font-family: "Spoqa Han Sans Neo", "sans-serif", Constantia, "Lucida Bright",
+    Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
     "Liberation Serif", Georgia, serif;
 }
