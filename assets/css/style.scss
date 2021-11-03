@@ -3,6 +3,7 @@
 
 @import "{{ site.theme }}";
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url("//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
 
 @font-face {
   font-family: "RIDIBatang";
@@ -13,7 +14,7 @@
 }
 
 html * {
-  font-family: "RIDIBatang";
+  font-family: "Iropke Batang", serif;
 }
 
 .markdown-body {
