@@ -48,6 +48,8 @@ function f1() {
 f1() === undefined; // true
 ```
 
+### class context
+
 [^1]: [[sloppy-mode-vs-strict-mode]]
 [^2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [^3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
