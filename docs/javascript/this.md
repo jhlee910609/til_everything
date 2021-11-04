@@ -50,7 +50,7 @@ f1() === undefined; // true
 
 ### class context
 
-The behavior of `this` in classes and functions is similar, since classes are functions under the hood. 그러다
+The behavior of `this` in classes and functions is similar, since classes are functions under the hood.
 
 [^1]: [[sloppy-mode-vs-strict-mode]]
 [^2]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
