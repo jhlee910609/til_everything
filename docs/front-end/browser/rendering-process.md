@@ -21,9 +21,9 @@
 - HTML parser가 `<scrip>` tag를 찾았을때, HTML parsing 작업을 멈추고, javascript code를 load, parse 그리고 실행시킵니다.
   - `document.write()` 와 같은 javascript 코드가 있다면 javascript가 DOM 구조 전체에 영향을 줄 수 있기 때문입니다.
 
-### browser에게 당신이 원하는 리소스 로드 방식을 알려주세요.
+### browser에게 당신이 원하는 리소스 로드 방식을 주세요.
 
-- javascript 코드에 `document.write()`와 같은 코드가 있지 않다면, `async`와 `defer`
+- javascript 코드에 `document.write()`와 같은 코드가 있지 않다면, `async`와 `defer` keyword를 활용하여
 
 ##### 참고자료
 
