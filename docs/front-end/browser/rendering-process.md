@@ -23,8 +23,10 @@
 
 ### browser에게 당신이 원하는 리소스 로드 방식을 주세요.
 
-- javascript 코드에 `document.write()`와 같은 코드가 있지 않다면, `async`와 `defer` keyword를 활용하여
+- javascript 코드에 `document.write()`와 같은 코드가 있지 않다면,`<scrip>` tag에 `async`와 `defer` 속성[^1]을 활용하여 blocking 없이 javascript를 비동기적으로 load와 실행시킬 수 있습니다.
 
 ##### 참고자료
 
 - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
+
+- [^1]: https://stackoverflow.com/questions/10808109/script-tag-async-defer
