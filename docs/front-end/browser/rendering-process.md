@@ -11,4 +11,7 @@
 
 ### 2. Subresource loading(하위 리소스 불러오기)
 
+- image, css, javascript와 같은 외부 리소스들은 network 혹은 cache로부터 해당 파일들을 가져와야 합니다.
+-
+
 ##### 참고자료
