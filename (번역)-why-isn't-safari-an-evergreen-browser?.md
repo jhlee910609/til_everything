@@ -1,4 +1,4 @@
-# (번역)-why-isn't-safari-an-evergreen-browser?
+# why-isn't-safari-an-evergreen-browser?
 
 ## (번역) 사파리는 evergreen browser가 아닙니다.
 
