@@ -23,4 +23,8 @@
 
 ### browser에게 당신이 원하는 리소스 로드 방식을 알려주세요.
 
+- javascript 코드에 `document.write()`와 같은 코드가 있지 않다면, `async`와 `defer`
+
 ##### 참고자료
+
+- [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
