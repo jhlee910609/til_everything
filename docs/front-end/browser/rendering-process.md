@@ -18,6 +18,7 @@
 
 ### Javascript는 parsing을 방해할 수 있습니다.
 
-- HTML parser가 `<scrip>` tag를 찾았을때, HTML parsing 작업을 멈추고,
+- HTML parser가 `<scrip>` tag를 찾았을때, HTML parsing 작업을 멈추고, javascript code를 load, parse 그리고 실행시킨다.
+-
 
 ##### 참고자료
