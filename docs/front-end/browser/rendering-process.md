@@ -25,6 +25,10 @@
 
 - javascript 코드에 `document.write()`와 같은 코드가 있지 않다면,`<scrip>` tag에 `async`와 `defer` 속성[^1]을 활용하여 blocking 없이 javascript를 비동기적으로 load와 실행시킬 수 있습니다.
 
+### style 계산
+
+// TODO: 211115 하위 내용 작성하기
+
 ##### 참고자료
 
 - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
