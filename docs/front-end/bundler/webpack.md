@@ -10,7 +10,7 @@ webpack은 parcel, rollupjs 등 다양한 종류의 bundler 중 하나입니다.
 
 ## webpack 기능 및 개념
 
-### Entry
+### 1. Entry
 
 모듈에 관한 의존성 그래프를 만들고 하나의 파일로 만들기 위한 시작 파일을 지정하기 위한 옵션입니다.
 
@@ -21,7 +21,7 @@ entry: {
     },
 ```
 
-### Output
+### 2. Output
 
 번들된 파일의 위치, 이름 등 기타 설정에 관한 옵션입니다. 아래와 같이 설정할 경우, `/build/libs/` 경로에 스크립트 파일이 결과물로 만들어져 있습니다.
 
@@ -105,36 +105,36 @@ inject: false,
 3. MiniCSSExtractPlugin
    css file이 js에 Import 되어 사용될 경우(css module import), on-demand로 css file load 가능합니다.
 
-## 웹팩 성능 개선하기
+## 웹팩 성능 더 개선하기
 
-https://webpack.js.org/guides/build-performance/
-https://webpack.js.org/blog/2020-10-10-webpack-5-release/#persistent-caching
-로더를 필요한 디렉토리에서만 사용하기
-빌드 결과물 크기를 줄이기
-라이브러리 의존을 줄인다.
-chunk를 잘 나눈 뒤 비동기 처리한다.
-안쓰이는 코드를 제거한다.
-변경된 부분만 컴파일한다.
-메모리에 올려 컴파일하기 (Hot Module Reloading)
-적절한 Devtool(소스맵) 사용하기
-TypeScript를 쓰는 경우 타입 체킹은 ForkTsCheckerWebpackPlugin이용하기.
+- https://webpack.js.org/guides/build-performance/
+- https://webpack.js.org/blog/2020-10-10-webpack-5-release/#persistent-caching
+- 로더를 필요한 디렉토리에서만 사용하기
+- 빌드 결과물 크기를 줄이기
+  - 라이브러리 의존을 줄인다.
+- chunk를 잘 나눈 뒤 비동기 처리한다.
+- 안쓰이는 코드를 제거한다.
+- 변경된 부분만 컴파일한다.
+- 메모리에 올려 컴파일하기 (Hot Module Reloading)
+- 적절한 Devtool(소스맵) 사용하기
+- TypeScript를 쓰는 경우 타입 체킹은 ForkTsCheckerWebpackPlugin이용하기.
 
 https://slack.engineering/keep-webpack-fast-a-field-guide-for-better-build-performance/
-병렬 처리
-parallel-webpack을 이용하여 병렬로 빌드 실행
-happypack을 이용하여 병렬로 loader 실행
-UglifyJSPlugin의 parallel option사용
-계산 부하 줄이기
-Minification을 최소화하기
-똑같은 코드가 여러번 import되지 않게 하기
-webpack Bundle Analyzer 과 Bundle Buddy을 이용하여 중복되는 부분을 찾고 CommonsChunkPlugin를 이용하여 chunk를 공유하도록 쪼갠다
-다른 파일을 참조하는 경우가 없는 파일은 파싱에서 아예 제외시키기
-autodll-webpack-plugin을 이용하여 한번 빌드된 번들을 재사용하도록 하기.
-적절한 소스맵 사용하기
-빌드 캐시 사용하기
-cache-loader
-babel-loader을 사용하는 경우 built-in caching
-빌드하는 하드웨어의 성능에 투자하기
+
+- 병렬 처리
+- parallel-webpack을 이용하여 병렬로 빌드 실행
+- happypack을 이용하여 병렬로 loader 실행
+- UglifyJSPlugin의 parallel option사용
+- Minification을 최소화하기
+- 똑같은 코드가 여러번 import되지 않게 하기
+- webpack Bundle Analyzer 과 Bundle Buddy을 이용하여 중복되는 부분을 찾고 CommonsChunkPlugin를 이용하여 chunk를 공유하도록 쪼갠다
+- 다른 파일을 참조하는 경우가 없는 파일은 파싱에서 아예 제외시키기
+- autodll-webpack-plugin을 이용하여 한번 빌드된 번들을 재사용하도록 하기.
+- 적절한 소스맵 사용하기
+- 빌드 캐시 사용하기
+  - cache-loader
+  - babel-loader을 사용하는 경우 built-in caching
+- 빌드하는 하드웨어의 성능에 투자하기
 
 다른 관련 문서
 https://blog.box.com/how-we-improved-webpack-build-performance-95
