@@ -18,7 +18,9 @@
 
 ### Javascript는 parsing을 방해할 수 있습니다.
 
-- HTML parser가 `<scrip>` tag를 찾았을때, HTML parsing 작업을 멈추고, javascript code를 load, parse 그리고 실행시킨다.
--
+- HTML parser가 `<scrip>` tag를 찾았을때, HTML parsing 작업을 멈추고, javascript code를 load, parse 그리고 실행시킵니다.
+  - `document.write()` 와 같은 javascript 코드가 있다면 javascript가 DOM 구조 전체에 영향을 줄 수 있기 때문입니다.
+
+### browser에게 당신이 원하는 리소스 로드 방식을 알려주세요.
 
 ##### 참고자료
