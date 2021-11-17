@@ -35,7 +35,9 @@
 
 - layout은 요소들의 기하학적 위치를 찾는 과정입니다.
 - Main thread는 DOM과 연산된 스타일을 돌면서 `x,y 좌표`와 `bounding box size` 정보를 갖고 있는 `layout tree`를 생성합니다.
--
+- layout tree는 DOM tree와 비슷한 구조를 갖고 있지만, 차이점은 page에 보이는 정보만 갖고 있습니다.
+  - 예를 들면, `display: none;`으로 되어 있는 요소는 layout tree에 보이지 않습니다.
+  -
 
 ##### 참고자료
 
