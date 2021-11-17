@@ -33,6 +33,9 @@
 
 ### layout
 
+- layout은 요소들의 기하학적 위치를 찾는 과정입니다.
+-
+
 ##### 참고자료
 
 - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
