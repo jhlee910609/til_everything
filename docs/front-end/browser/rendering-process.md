@@ -34,6 +34,7 @@
 ### layout
 
 - layout은 요소들의 기하학적 위치를 찾는 과정입니다.
+- Main thread는 DOM과 연산된 스타일을 돌면서 `x,y 좌표`와 `bounding box size` 정보를 갖고 있는 `layout tree`를 생성합니다.
 -
 
 ##### 참고자료
