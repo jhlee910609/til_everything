@@ -27,10 +27,14 @@
 
 ### style 계산
 
-// TODO: 211115 하위 내용 작성하기
+- Main Thread에서 CSS를 parsing하고, 각각에 DOM 노드에 계산된 스타일을 결정합니다.
+
+  [<img src='https://developers.google.com/web/updates/images/inside-browser/part3/computedstyle.png'/>]()
+
+### layout
 
 ##### 참고자료
 
 - [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
 
-- [^1]: https://stackoverflow.com/questions/10808109/script-tag-async-defer
+  [^1]: [javascript - Script Tag - async & defer - Stack Overflow](https://stackoverflow.com/questions/10808109/script-tag-async-defer)
