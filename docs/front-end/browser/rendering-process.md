@@ -37,7 +37,17 @@
 - Main thread는 DOM과 연산된 스타일을 돌면서 `x,y 좌표`와 `bounding box size` 정보를 갖고 있는 `layout tree`를 생성합니다.
 - layout tree는 DOM tree와 비슷한 구조를 갖고 있지만, 차이점은 page에 보이는 정보만 갖고 있습니다.
   - 예를 들면, `display: none;`으로 되어 있는 요소는 layout tree에 보이지 않습니다.
-  -
+
+### paint
+
+- Main thread가 paint records를 생성하기 위해 layout tree를 돕니다.
+
+  - paint record는 painting 과정에 대한 메모입니다.
+
+### rendering pipeline을 업데이트하는 것은 값비쌉니다.
+
+- `rendering pipeline`에서 가장 중요한 것은 각 단계에서 이전 작업의 결과를 사용하여 새 데이터를 생성한다는 것입니다.
+-
 
 ##### 참고자료
 
