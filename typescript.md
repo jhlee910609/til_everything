@@ -3,6 +3,7 @@
 - [[실전-프로젝트로-배우는-타입스크립트]]
 - [[typescript의-type-checking-system]]
 - [[module-vs-namespace]]
+- [[effective-typescript]]
 
 ### Template Literal types
 
