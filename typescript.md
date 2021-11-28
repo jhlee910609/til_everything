@@ -4,6 +4,7 @@
 - [[typescript의-type-checking-system]]
 - [[module-vs-namespace]]
 - [[effective-typescript]]
+- [[udemy-typescript-basic]]
 
 ### Template Literal types
 
