@@ -23,3 +23,7 @@ console.log(sum(1, 2)); // 3
 표면적으로는 두 모듈 방식이 매우 비슷해보이지만, 구현은 매우 다릅니다.
 
 ## cjs에서 esm은 서로 호출하여 사용할 수 있지만, 이는 매우 번거롭습니다.
+
+###### 참고
+
+- [ES modules: A cartoon deep-dive - Mozilla Hacks - the Web developer blog](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
