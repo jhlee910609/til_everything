@@ -4,6 +4,17 @@
 
 ## cjs와 esm
 
+### cjs
+
+```javascript
+// @filename: util.cjs
+module.exports.sum = (x, y) => x + y;
+
+// @filename: main.cjs
+const { sum } = require("./util.cjs");
+console.log(sum(1, 2)); // 3
+```
+
 ## cjs와 esm은 완벽히 다르다.
 
 표면적으로는 두 모듈 방식이 매우 비슷해보이지만, 구현은 매우 다릅니다.
