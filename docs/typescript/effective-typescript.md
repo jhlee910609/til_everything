@@ -22,10 +22,29 @@ type Shape = Rectangle | Square;
 
 
 fucntion calcArea(shape: Shape){
+    // instanceof는 runtime에서만 동작함
+    // Rectangle은 타입이라 runtime 시점에 아무런 역할을 하지 않음
     if(shape of instanceof Rectangle){
-
+        return shape.width * shape.height;
+    } else {
+        return shape.width * shape.width;
     }
 }
+```
 
+위 코드를 명확하게 바꾸면
+
+```typescript
+
+fucntion calcArea(shape: Shape){
+    // instanceof는 runtime에서만 동작함
+    // Rectangle은 타입이라 runtime 시점에 아무런 역할을 하지 않음
+    if('height' in shape){
+         // Rectangle
+        return shape.width * shape.height;
+    } else {
+        return shape.width * shape.width;
+    }
+}
 
 ```
