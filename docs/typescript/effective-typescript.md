@@ -8,3 +8,24 @@
   - 아래 두 가지 역할은 완벽하게 독립적으로 동작합니다.
     1. 최신 타입스크립트/자바스크립트를 브라우저에서 동작할 수 있도록 호환 가능한 버전의 자바스크스립트로 transpiling 합니다.
     2. 코드의 타입 오류를 체크합니다.
+
+```typescript
+interface Square {
+    width: number;
+}
+
+interface Rectangle extends Square {
+    height: number;
+}
+
+type Shape = Rectangle | Square;
+
+
+fucntion calcArea(shape: Shape){
+    if(shape of instanceof Rectangle){
+
+    }
+}
+
+
+```
