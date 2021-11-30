@@ -21,3 +21,12 @@ function count() {
 count();
 console.log("result:", j); // reference 에러
 ```
+
+### var vs const vs let
+
+|            |       var       |    const     |     let      |
+| ---------- | :-------------: | :----------: | :----------: |
+| hoisting   |        o        |      o       |      o       |
+| scope      | function-scoped | block-scoped | block-scoped |
+| re-declare |        o        |      x       |      x       |
+| update     |        o        |      x       |      o       |
