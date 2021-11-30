@@ -1,4 +1,4 @@
-# TDZ(Temporal-Dead-Zone)
+# TDZ(Temporal Dead Zone)
 
 ## Temporal Dead Zone란?
 
