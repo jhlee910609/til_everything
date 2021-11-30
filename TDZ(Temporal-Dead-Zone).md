@@ -39,3 +39,21 @@ function square(a = a) {
 
 square(); // throw reference error
 ```
+
+## TDZ의 영향을 받지 않는 `var`, `function`, `import` 구문
+
+- 위 키워드들은 모두 호이스팅된다.
+
+```javascript
+name; // no problem!
+var name;
+
+hello("jane"); // hi, jane
+function hello(name) {
+  console.log(`hi, ${name}`);
+}
+hello("john"); // hi, john
+
+myFunc(); // work
+import { myFunc } from "./myModule";
+```
