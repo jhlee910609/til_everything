@@ -28,3 +28,14 @@ class MyCar extends Car {
 // Does not work!
 const myCar = new MuscleCar(‘blue’, ‘300HP’); // `ReferenceError`
 ```
+
+### 기본 함수 매개변수
+
+```javascript
+const a = 1;
+function square(a = a) {
+  return a * a;
+}
+
+square(); // throw reference error
+```
