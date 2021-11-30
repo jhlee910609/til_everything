@@ -57,3 +57,15 @@ hello("john"); // hi, john
 myFunc(); // work
 import { myFunc } from "./myModule";
 ```
+
+### TDZ에서의 `typeof` 연산자의 동작
+
+- 위와 같은 원리애서 `typeof` 동작도 동일하게 이뤄진다.
+  - `typeof` 연산자는 변수가 현재 스코프 내에 선언되었는지 확인할 때, 유용하다.
+
+```javascript
+typeof myName; // undefined
+typeof yourName; // reference error
+
+let yourName;
+```
