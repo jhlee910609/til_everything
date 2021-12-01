@@ -1,11 +1,13 @@
 # v17 breaking change
 
 > react 17에는 무엇이 달라졌나...?
+>
+> - native event: vanilla.js event 방식 ex) someElement.addEventListener('click', handler);
 
 ### event delegation 방식 변경
 
-- react event hanlder를 document에 부착하지 않음
-- react root dom container에 부탁함
+- react event hanlder를 document에 부착하지(attachment) 않음
+- react root dom container에 부착함(attachment)
   ![<img src="https://reactjs.org/static/bb4b10114882a50090b8ff61b3c4d0fd/21cdd/react_17_delegation.png">](https://reactjs.org/static/bb4b10114882a50090b8ff61b3c4d0fd/21cdd/react_17_delegation.png)
   - native event의 방식과 다르게 가기때문에 문제 x
   - 한 document에 여러 개의 react dom이 있을 경우, event handling의 혼선이 줄어들 수 있음
