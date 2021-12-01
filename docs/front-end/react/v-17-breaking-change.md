@@ -16,4 +16,9 @@
 - bundle size가 아주 약간 줄음
 - 새로운 문법이 생기거나, 기존 문법이 제거된 그런 변경점은 아님
 
-### B
+### Browser와 정렬
+
+> react에서 일부 event들이 browser의 event 방식과 동일하게 동작하도록 수정했음
+
+- `onScroll`: bubbling 되었었는데, 안됨. native event에서는 bubbling 안됨
+- `onFocus`, `onBlur` 각각 native의 `onfocusin`, `onfocusout` 사용하도록 코드 수정
