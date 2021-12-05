@@ -8,6 +8,7 @@
 
 - `require('./module/path')` 과 `export modules` keyword를 활용합니다.
 - named export와 default export 모두 사용 가능합니다.
+- 동기적으로 동작합니다.
 
 ```javascript
 // @filename: util.cjs
