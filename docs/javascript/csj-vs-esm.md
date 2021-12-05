@@ -8,7 +8,7 @@
 
 - `require('./module/path')` 과 `export modules` keyword를 활용합니다.
 - named export와 default export 모두 사용 가능합니다.
-- 동기적으로 동작합니다.
+- 동기적으로 동작합니다. 따라서, `Promise`를 return 하지 않습니다. `require` 키워드는 disk로부터
 
 ```javascript
 // @filename: util.cjs
@@ -28,4 +28,4 @@ console.log(sum(1, 2)); // 3
 ###### 참고
 
 - [ES modules: A cartoon deep-dive - Mozilla Hacks - the Web developer blog](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1
+- [Node Modules at War: Why CommonJS and ES Modules Can’t Get Along | by Dan Fabulich | Code Red](https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1)
