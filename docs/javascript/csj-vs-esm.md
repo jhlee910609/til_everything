@@ -30,4 +30,5 @@ console.log(sum(1, 2)); // 3
 - [ES modules: A cartoon deep-dive - Mozilla Hacks - the Web developer blog](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
 - [Node Modules at War: Why CommonJS and ES Modules Can’t Get Along | by Dan Fabulich](https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1)
 - [16. Modules](https://exploringjs.com/es6/ch_modules.html#sec_overview-modules)
-- https://medium.com/webpack/the-state-of-javascript-modules-4636d1774358
+- [The state of JavaScript modules. Recently, there was a lot of fuss on… | by Johannes Ewald | webpack | Medium](https://medium.com/webpack/the-state-of-javascript-modules-4636d1774358)
+- https://hackernoon.com/node-js-tc-39-and-modules-a1118aecf95e
