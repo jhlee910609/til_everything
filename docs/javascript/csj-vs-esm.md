@@ -2,6 +2,11 @@
 
 > javascript의 대표적인 module 방식 cjs와 esm에 대해 알아봅니다.
 
+## javascript module 변천사
+
+- IIFE
+- AMD
+
 ## cjs와 esm
 
 ### cjs
