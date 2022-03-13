@@ -8,13 +8,19 @@
 
   - 내 디자인 개발
     ![](https://tva1.sinaimg.cn/large/008i3skNgy1gxjaqd5bang30go0afb29.gif)
+    - list view 제외한 React 컴포넌트 개발
+    - 더보기 메뉴, 팝업 등
+    - javascript 작업
   - 내 드라이브 개발
     ![](https://tva1.sinaimg.cn/large/008i3skNgy1gxjar3x4bcg30go0afdrn.gif)
+    - list view 제외한 컴포넌트 개발
+    - 더보기 메뉴, 팝업 등
+    - javascript 작업
   - 브랜드키트 개발
     ![](https://tva1.sinaimg.cn/large/008i3skNgy1gxjazli8cbg30go0afn2h.gif)
 
-- 사용자 디자인 및 리소스 관리 페이지 리뉴얼 (zero-base에서 개발)
-- MVC Architecture, React.js, React-Router-Dom 활용하여 개발
+- 사용자 디자인 및 리소스 관리 페이지(workspace) 리뉴얼 (zero-base에서 개발)
+- React.js, React-Router-Dom 활용하여 개발
 
 ## chart 요소 관련 기능 중 data grid 개발 (2021.01 ~ 2021.03)
 
