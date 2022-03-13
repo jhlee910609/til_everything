@@ -16,8 +16,10 @@
     - list view 제외한 컴포넌트 개발
     - 더보기 메뉴, 팝업 등
     - javascript 작업
-  - 브랜드키트 개발
+  - 브랜드 키트 개발
     ![](https://tva1.sinaimg.cn/large/008i3skNgy1gxjazli8cbg30go0afn2h.gif)
+    - b2b용 엔터프라이즈 기능
+      - 사용자 요금제에 따른 브랜드 키트 제한 개수, 각각 항목의 제한 개수 등에 대한 제약 처리
 
 - 사용자 디자인 및 리소스 관리 페이지(workspace) 리뉴얼 (zero-base에서 개발)
 - React.js, React-Router-Dom 활용하여 개발
