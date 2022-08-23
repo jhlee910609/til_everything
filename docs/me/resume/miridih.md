@@ -2,6 +2,11 @@
 
 > '미리디'라는 회사의 프로덕트 중 웹 디자인 툴인 ['미리캔버스'](http://www.miricanvas.com/design)의 UI 컴포넌트 개발을 주로 하였습니다.
 
+## 미리캔버스 유료화 feature 개발
+
+- 기존 무료 서비스에서 유료화 전환
+- 프론트엔드 챕터 리딩(챕터원 2명과 함께 개발)
+
 ## /workspace 개발 (2021.04 ~ current)
 
 - [워크스페이스 - 미리캔버스](http://www.miricanvas.com/workspace)
