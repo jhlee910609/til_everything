@@ -4,7 +4,7 @@
 
 # theme 교체 방식 개선
 
-- ![]()
+- ![](../../../attachments/css.JPG)
 
 ## 미리캔버스 유료화 feature 개발
 
