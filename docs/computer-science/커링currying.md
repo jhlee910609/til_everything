@@ -2,16 +2,16 @@
 
 ```javascript
 function _curry(fn) {
-  return function (a) {
-    return function (b) {
-      return fn(a, b);
-    };
+  return function (a, b) {
+    return arguments.length === 2
+      ? fn(a, b)
+      : function (b) {
+          return fn(a, b);
+        };
   };
 }
 
-const add = _curry((a, b) => {
-  return a + b;
-});
+const add = _curry((a, b) => a + b);
 
 const add_10 = add(10);
 const add_5 = add_10(5); // result: 15
