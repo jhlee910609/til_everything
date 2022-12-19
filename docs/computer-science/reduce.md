@@ -1,0 +1,5 @@
+# reduce
+
+```javascript
+function reduce() {}
+```
