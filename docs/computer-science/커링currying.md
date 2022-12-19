@@ -38,4 +38,9 @@ const sub_10 = sub(10);
 sub(10)(5); // result: 5
 // 표현에 맞는 결과를 준다.
 sub_10(5); // result: -5
+
+// 2. _get 만들어 좀 더 간단하게 하기
+function _get(obj, key) {
+  return obj == null ? undefined : obj[key];
+}
 ```
