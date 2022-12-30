@@ -1,0 +1,6 @@
+# curry
+- https://javascript.info/currying-partials
+
+<script>
+    const curry = f => (a, ..._) => _.length ? f(a, ..._) : (..._) => f(a, ..._);
+</script>

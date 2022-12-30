@@ -1,0 +1,11 @@
+# filter
+
+<script>
+    const filter = (f, iter) => {
+        let res = [];
+        for (const ele of iter) {
+            f(ele) && res.push(ele)
+        }
+        return res;
+    }
+</script>

@@ -1,0 +1,41 @@
+<script>
+    const log = console.log;
+</script>
+
+# 제네레이터/이터레이터
+- 제네레이터: 이터레이터이자 이터러브를 생성하는 함수
+
+<script>
+    function *gen(){
+        yield 1;
+        if(false)
+            yield 2;
+        yield 3;
+    }
+
+    const iter = gen();
+    log(iter[Symbol.iterator]() === iter);
+    for (const a of iter) {
+        console.log(a); // 1, 3
+    }
+
+    function *odds(l){
+        for (let i = 1; i <= l; i+=2) {
+            yield i;
+            
+        }
+    }
+
+    const iter2 = odds(10);
+
+    for (const a of iter2) {
+        console.log(a);
+        
+    }
+
+    function *infinity(i=0){
+        while(true){
+            yield i++;
+        }
+    }
+</script>

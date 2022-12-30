@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const iterable = {
+        [Symbol.iterator](){
+            let i=3;
+            return {
+                next(){
+                    return i===0? {done: true} : {value: i--, done: false}
+                },
+                // well-formed iterator
+                [Symbol.iterator](){
+                    return this;
+                }
+            }
+        }
+    }
+
+    for (const a of iterable) {
+        console.log('a >>',a);
+    }
+
+    const iterator = iterable[Symbol.iterator]();
+
+    for (const b of iterator) {
+        console.log('b >>', b);
+        
+    }
+</script>
+</html>

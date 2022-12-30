@@ -1,0 +1,38 @@
+<script>
+    const product = [
+    {
+        name: '반바지',
+        price: 123123,
+    },
+    {
+        name: '긴 팔',
+        price: 123123,
+    }
+]
+
+
+const map = (f, iter) => {
+    let res = [];
+    for (const ele of iter) {
+        res.push(f(ele))
+    }
+    return res;
+}
+
+console.log(map(prd => prd.name,product));
+
+</script>
+
+# 이터러블 프로토콜을 따른 map의 다형성
+
+<script>
+// 유사 배열도 iterating 할 수 있음 
+console.log(map((ele) => ele.innerHTML, document.querySelectorAll('*')));
+function *gen(){
+    yield 2;
+    if(false) yield 3;
+    yield 4;
+}
+// iterable 이라 아래 코드 정상 동작 
+console.log(map(val => val * val, gen()));
+</script>
