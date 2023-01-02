@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+
+<body>
+
+</body>
+<script>
+    const user = [{ name: 'kim', age: 12, gender: 'male' }, { name: 'lee', age: 32, gender: 'female' }, { name: 'park', age: 32, gender: 'male' }]
+    const getAge = _.get('age');
+    const groupByGender = _.flow(_.groupBy('gender'));
+
+    // console.log(groupByGender(user));    
+
+    const prir = { 'male': 1, 'female': 2 };
+    user.sort((a, b) => prir[a.gender] - prir[b.gender] || a.age - b.age)
+    console.log(user);
+</script>
+
+</html>
