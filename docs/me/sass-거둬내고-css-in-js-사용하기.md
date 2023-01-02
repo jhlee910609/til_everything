@@ -72,6 +72,7 @@ external css file을 가지고 있을 경우, browser에 캐싱이 가능하지�
 1. `emotionjs`, `styled-component`와 같은 js library에 종속적이기 때문에 js가 구동되지 않는 환경에서는 스타일을 사용할 수 없습니다.
 2. style이 두 번 parsing 됩니다. 첫 번째는 css-in-js library에 의해, 두 번째는 browser에 의해 parsing 됩니다.
 3. 보통 web page가 loading 될 때, browser는 CSS를 읽고 적용합니다. 하지만 css-in-js를 사용한다면, browser는 동적으로 CSS style tag를 생성하고, webpage에 적용합니다. 따라서 style을 동적으로 읽고, 생성하는 것에 동작 시간이 소요됩니다.
+4. [css-in-js에 대한 부정적인 글.](https://dev.to/srmagura/why-were-breaking-up-wiht-css-in-js-4g9b)
 
 ### zero-runtime css-in-js
 
