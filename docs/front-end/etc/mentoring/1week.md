@@ -8,7 +8,7 @@ marp: true
 
 ## 아이엠그라운드 자기소개 시작!
 
-![50% center](../../../../attachments/2023-01-04-18-16-30.png)
+![center](../../../../attachments/2023-01-04-18-16-30.png)
 
 ---
 
@@ -30,3 +30,14 @@ marp: true
 ## 지금은 e커머스 분야의 Front-end 개발자로 살고 있습니다.
 
 ![width 200px](../../../../attachments/2023-01-04-18-35-40.png)
+
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-align: center
+}
+</style>
