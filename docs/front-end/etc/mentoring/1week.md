@@ -29,6 +29,3 @@ marp: true
 ---
 
 ![bg](../../../../attachments/2023-01-04-18-35-40.png)
-![bg](../../../../attachments/2023-01-04-18-35-40.png)
-
-# <style>
