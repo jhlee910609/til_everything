@@ -24,7 +24,6 @@ marp: true
 
 ---
 ## 부트캠프를 간 이유?
-원래 IT 서비스 쪽에 
 무언가를 창조하고 싶은 욕구가 항상 있었어요.
 그래서 무언가를 '만드는' 직업을 하고 싶었어요.
 
@@ -34,18 +33,13 @@ marp: true
 ![bg w:90%](../../../../attachments/2023-01-04-18-35-40.png)
 
 ---
-### 기술 스택
-#### language
-- javascript, typescript
-#### framework(library)
-- react, vue
-#### bundler
-- webpack
-#### style
-- css, scss(sass), styled-component
+## 기술 스택
+- language: javascript, typescript
+- framework(library): react, vue
 
-### server(아주 간단하게만..)
-- node.js
+- bundler: webpack
+- style: css, scss(sass), styled-component
+- server:  node.js(아주 간단하게)
 ---
 
 ## 아이엠그라운드 자기소개 시작!
