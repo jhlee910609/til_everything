@@ -23,23 +23,26 @@ marp: true
 ## 저도 부트캠프(~~강남 f*st 뭐시기..~~) 출신이에요~
 
 ---
+## 부트캠프를 간 이유?
+뭔가 만들어낼 수 있는 사람이 되고 싶었어요. 
 
+---
 ![bg w:80%](../../../../attachments/2023-01-04-19-02-27.png)
 ![bg w:90%](../../../../attachments/2023-01-04-18-35-40.png)
 
 ---
-- Front-end framework(lib)
-![bg right vertical](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+### 기술 스택
+#### language
+- javascript, typescript
+#### framework(library)
+- react, vue
+#### bundler
+- webpack
+#### style
+- css, scss(sass), styled-component
 
-
-
-![bg](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
-
-
-
-
-
-
+### server(아주 간단하게만..)
+- node.js
 ---
 
 ## 아이엠그라운드 자기소개 시작!
