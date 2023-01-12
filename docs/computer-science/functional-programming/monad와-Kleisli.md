@@ -17,7 +17,10 @@ log(f(g(1))); // 4
 log(f(g())); // NaN <- 이 결과 값은 우리가 원했던 상황이 아니다!
 
 // 아래와 같이 코딩 한다면 위와 같이 NaN이 나오는 문제를 피할 수 있다. 
+// Array + map으로 방어적으로 function composition을 하였다. 
+// f(g(1))은 아래처럼 composition할 수 있고,
 Array.of(1).map(g).map(f).forEach(console.log);
+// f(g())은 아래처럼 composition 할 수 있다.
 [].map(g).map(f).forEach(console.log)
 
 // Promise chaining으로 monad 개념 적용해보기
