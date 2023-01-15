@@ -73,3 +73,5 @@ marp: true
 
 ---
 
+저는 React, scss(sass), webpack을 활용하여 SPA 서비스인 맛집 지도를 
+
