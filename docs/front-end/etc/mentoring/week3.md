@@ -56,7 +56,7 @@ marp: true
 - [네이버 테크 직군 신입 채용](https://linkareer.com/activity/90744)
 - [[크리마 (크리마팩토리, 크리마랩)] Junior Software Engineer (신입가능) 채용 | 원티드](https://www.wanted.co.kr/wd/8138)
 
-- https://toss.im/career/job-detail?job_id=4907018003&isNewCareer=false
+- [토스채용](https://toss.im/career/job-detail?job_id=4907018003&isNewCareer=false)
 ---
 
 ### 알고리즘
@@ -67,3 +67,9 @@ marp: true
 
 --- 
 ### 1차 면접(실무 면접)
+- DB, OS, Network 지식을 물어봄
+- 비전공인걸 감안하고 뽑았다면 프로젝트, Front-end 기초 지식을 물어봄
+- 가장 중요한 것은 내가 쓴 것은 잘 이야기할 수 있어야함
+
+---
+
