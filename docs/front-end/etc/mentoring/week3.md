@@ -54,6 +54,7 @@ marp: true
 ### 2. 그 회사가 무엇을 원하는지 살펴보기
 
 - [네이버 테크 직군 신입 채용](https://linkareer.com/activity/90744)
+- [[크리마 (크리마팩토리, 크리마랩)] Junior Software Engineer (신입가능) 채용 | 원티드](https://www.wanted.co.kr/wd/8138)
 - 
 
 
