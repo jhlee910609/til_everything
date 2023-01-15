@@ -55,6 +55,8 @@ marp: true
 
 - [네이버 테크 직군 신입 채용](https://linkareer.com/activity/90744)
 - [[크리마 (크리마팩토리, 크리마랩)] Junior Software Engineer (신입가능) 채용 | 원티드](https://www.wanted.co.kr/wd/8138)
+
+- https://toss.im/career/job-detail?job_id=4907018003&isNewCareer=false
 ---
 
 ### 알고리즘
