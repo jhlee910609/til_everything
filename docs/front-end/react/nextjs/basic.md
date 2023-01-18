@@ -1,4 +1,4 @@
-# next js
+# basic
 
 ## CSR(Clinet Side Rendering)
 - 모든 javascript를 브라우저가 실행시켜 화면을 그림
