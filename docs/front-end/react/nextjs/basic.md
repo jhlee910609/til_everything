@@ -10,3 +10,7 @@
 ## SSR(Server Side Rendering)
 - javascript 기반으로 HTML pre-rendering 해둠 
 - hydration -> 그려진 html 기반으로 interaction(javascript) 코드를 binding 함 
+
+
+## next.js
+- [GitHub - nomadcoders/nextjs-fundamentals: Learning NextJS by Building a Tiny Movie Website.](https://github.com/nomadcoders/nextjs-fundamentals)
