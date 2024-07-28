@@ -11,3 +11,8 @@
 ## bundle 크기 줄이기
 
 - bundler를 구성할 때, 보통 기본으로 제공한 cli를 활용한다면 아래의 대부분의 기능들은 작동할 것임
+
+### dynamic import
+
+- 모든 javascript module이 build 시점에 필요한지에 대한 의문에서 출발
+- 크기가 큰 javascript module에 대해서 runtime에서 필요할 때, 불러올 수 있도록 코딩
