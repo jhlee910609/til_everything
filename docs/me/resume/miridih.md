@@ -10,6 +10,7 @@
 
 - 기존 무료 서비스에서 유료화 전환
 - 프론트엔드 챕터 리딩(챕터원 2명과 함께 개발)
+- https://yozm.wishket.com/magazine/detail/2104/
 
 ## /workspace 개발 (2021.04 ~ current)
 
