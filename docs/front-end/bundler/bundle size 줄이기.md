@@ -16,3 +16,21 @@
 
 - 모든 javascript module이 build 시점에 필요한지에 대한 의문에서 출발
 - 크기가 큰 javascript module에 대해서 runtime에서 필요할 때, 불러올 수 있도록 코딩
+- 일반적인 import 방식은 아래와 같음
+
+```javascript
+import module from "./module.js";
+
+module.xxxx();
+```
+
+- dynamic import를 적용 후에는 아래와 같음
+
+```javascript
+import('module.js')
+  .then((module) => {
+    ...
+  });
+```
+
+###
