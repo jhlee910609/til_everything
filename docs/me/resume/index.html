@@ -2,44 +2,72 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>Vue 2.7 Component + IntersectionObserver</title>
+    <title>여행 상품 IntersectionObserver 예제</title>
     <script src="https://unpkg.com/vue@2.7.16/dist/vue.min.js"></script>
     <style>
       body {
         font-family: sans-serif;
-        padding: 0;
         margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
       }
 
       .item-view {
-        margin: 100px auto;
-        padding: 30px;
+        margin: 50px auto;
+        padding: 20px;
         width: 80%;
-        background-color: #f5f5f5;
-        border: 2px solid #ccc;
-        text-align: center;
-        font-size: 20px;
+        max-width: 600px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .item-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .item-price {
+        font-size: 18px;
+        color: #007bff;
+      }
+
+      .loading {
+        font-size: 16px;
+        color: #888;
+        margin-left: 10px;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      <item-view v-for="i in 10" :key="i" :initial-title="`Item ${i}`" />
+      <item-view
+        v-for="(item, i) in items"
+        :key="item.id"
+        :title="item.title"
+      />
     </div>
 
     <script>
       Vue.component("item-view", {
-        props: ["initialTitle"],
+        props: ["title"],
         template: `
         <div class="item-view" ref="root">
-          {{ title }}
+          <div class="item-title">{{ title }}</div>
+          <div class="item-price">
+            {{ price !== null ? price + '원' : '' }}
+            <span v-if="isLoading" class="loading">가격 로딩 중...</span>
+          </div>
         </div>
       `,
         data() {
           return {
-            title: this.initialTitle,
+            price: null,
+            isLoading: false,
+            hasRequestedPrice: false,
             observer: null,
-            hasUpdated: false,
           };
         },
         mounted() {
@@ -55,27 +83,41 @@
         methods: {
           onIntersect(entries) {
             const entry = entries[0];
-            if (entry.isIntersecting && !this.hasUpdated) {
-              this.hasUpdated = true;
+            if (entry.isIntersecting && !this.hasRequestedPrice) {
+              this.hasRequestedPrice = true;
+              this.isLoading = true;
 
-              // 비동기 타이틀 변경
+              const delay = Math.random() * 6000 + 1000; // 1~7초
               setTimeout(() => {
-                this.title = `✅ Viewed ${this.initialTitle}`;
-              }, Math.random() * 6000 + 1000);
+                this.price = (Math.floor(Math.random() * 50) + 10) * 1000; // 예: 10,000 ~ 60,000원
+                this.isLoading = false;
+              }, delay);
 
-              this.observer.disconnect(); // 더 이상 관찰하지 않음
+              this.observer.disconnect();
             }
           },
         },
         beforeDestroy() {
-          if (this.observer) {
-            this.observer.disconnect();
-          }
+          if (this.observer) this.observer.disconnect();
         },
       });
 
       new Vue({
         el: "#app",
+        data: {
+          items: [
+            { id: 1, title: "일본 오사카 3박 4일" },
+            { id: 2, title: "베트남 다낭 5박 6일" },
+            { id: 3, title: "제주도 렌트카 자유여행" },
+            { id: 4, title: "스위스 알프스 하이킹" },
+            { id: 5, title: "태국 푸켓 올인클루시브" },
+            { id: 6, title: "미국 뉴욕 브로드웨이 투어" },
+            { id: 7, title: "영국 런던 박물관 탐방" },
+            { id: 8, title: "호주 시드니 자연 체험" },
+            { id: 9, title: "캐나다 로키 마운틴" },
+            { id: 10, title: "남미 페루 마추픽추 트레킹" },
+          ],
+        },
       });
     </script>
   </body>
