@@ -2,103 +2,94 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>여행 상품 IntersectionObserver 예제</title>
-    <script src="https://unpkg.com/vue@2.7.16/dist/vue.min.js"></script>
+    <title>여행 상품 리스트</title>
+    <script src="https://unpkg.com/vue@2.7.14/dist/vue.min.js"></script>
     <style>
       body {
         font-family: sans-serif;
         margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
+        padding: 1rem;
       }
-
-      .item-view {
-        margin: 50px auto;
-        padding: 20px;
-        width: 80%;
-        max-width: 600px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        text-align: left;
+      .item {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
       }
-
-      .item-title {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 10px;
+      .skeleton {
+        display: inline-block;
+        height: 1em;
+        width: 5em;
+        background: linear-gradient(90deg, #eee, #ddd, #eee);
+        background-size: 200% 100%;
+        animation: pulse 1.2s ease-in-out infinite;
+        border-radius: 4px;
       }
-
-      .item-price {
-        font-size: 18px;
-        color: #007bff;
-      }
-
-      .loading {
-        font-size: 16px;
-        color: #888;
-        margin-left: 10px;
+      @keyframes pulse {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
       }
     </style>
   </head>
   <body>
     <div id="app">
-      <item-view
-        v-for="(item, i) in items"
-        :key="item.id"
-        :title="item.title"
-      />
+      <item-view v-for="item in items" :key="item.id" :item="item" />
     </div>
 
     <script>
       Vue.component("item-view", {
-        props: ["title"],
+        props: ["item"],
         template: `
-        <div class="item-view" ref="root">
-          <div class="item-title">{{ title }}</div>
-          <div class="item-price">
-            {{ price !== null ? price + '원' : '' }}
-            <span v-if="isLoading" class="loading">가격 로딩 중...</span>
-          </div>
+        <div class="item" ref="item">
+          <h3>{{ item.title }}</h3>
+          <p>
+            가격:
+            <span v-if="loading"><span class="skeleton"></span></span>
+            <span v-else>{{ livePrice.toLocaleString() }}원</span>
+            <small v-if="!loading && livePrice !== item.basePrice">(실시간 가격)</small>
+          </p>
         </div>
       `,
         data() {
           return {
-            price: null,
-            isLoading: false,
-            hasRequestedPrice: false,
+            loading: false,
+            livePrice: this.item.basePrice,
             observer: null,
           };
         },
         mounted() {
-          const options = {
-            root: null,
-            rootMargin: "500px 0px 500px 0px",
-            threshold: 0,
-          };
-
-          this.observer = new IntersectionObserver(this.onIntersect, options);
-          this.observer.observe(this.$refs.root);
+          this.observer = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting && entry.intersectionRatio > 0) {
+                this.observer.disconnect();
+                this.fetchLivePrice();
+              }
+            },
+            {
+              root: null,
+              rootMargin: "500px",
+              threshold: 0.01,
+            }
+          );
+          this.observer.observe(this.$refs.item);
         },
         methods: {
-          onIntersect(entries) {
-            const entry = entries[0];
-            if (entry.isIntersecting && !this.hasRequestedPrice) {
-              this.hasRequestedPrice = true;
-              this.isLoading = true;
-
-              const delay = Math.random() * 6000 + 1000; // 1~7초
-              setTimeout(() => {
-                this.price = (Math.floor(Math.random() * 50) + 10) * 1000; // 예: 10,000 ~ 60,000원
-                this.isLoading = false;
-              }, delay);
-
-              this.observer.disconnect();
-            }
+          fetchLivePrice() {
+            this.loading = true;
+            const delay = Math.random() * 3000 + 1000; // 1~7초 랜덤
+            setTimeout(() => {
+              this.livePrice =
+                this.item.basePrice + Math.floor(Math.random() * 10000 - 5000); // ±5천 원 랜덤
+              console.log(
+                `실시간 가격 적용 완료 → ID: ${this.item.id}, Title: ${this.item.title}`
+              );
+              this.loading = false;
+            }, delay);
           },
-        },
-        beforeDestroy() {
-          if (this.observer) this.observer.disconnect();
         },
       });
 
@@ -106,16 +97,56 @@
         el: "#app",
         data: {
           items: [
-            { id: 1, title: "일본 오사카 3박 4일" },
-            { id: 2, title: "베트남 다낭 5박 6일" },
-            { id: 3, title: "제주도 렌트카 자유여행" },
-            { id: 4, title: "스위스 알프스 하이킹" },
-            { id: 5, title: "태국 푸켓 올인클루시브" },
-            { id: 6, title: "미국 뉴욕 브로드웨이 투어" },
-            { id: 7, title: "영국 런던 박물관 탐방" },
-            { id: 8, title: "호주 시드니 자연 체험" },
-            { id: 9, title: "캐나다 로키 마운틴" },
-            { id: 10, title: "남미 페루 마추픽추 트레킹" },
+            { id: 1, title: "하노이 7박 8일 여행", basePrice: 58263 },
+            { id: 2, title: "삿포로 2박 3일 여행", basePrice: 61148 },
+            { id: 3, title: "밴쿠버 4박 5일 여행", basePrice: 86336 },
+            { id: 4, title: "시드니 7박 8일 여행", basePrice: 53813 },
+            { id: 5, title: "토론토 2박 3일 여행", basePrice: 55163 },
+            { id: 6, title: "파리 5박 6일 여행", basePrice: 83170 },
+            { id: 7, title: "다낭 4박 5일 여행", basePrice: 76739 },
+            { id: 8, title: "오사카 6박 7일 여행", basePrice: 54899 },
+            { id: 9, title: "도쿄 7박 8일 여행", basePrice: 34744 },
+            { id: 10, title: "호치민 2박 3일 여행", basePrice: 70884 },
+            { id: 11, title: "프라하 7박 8일 여행", basePrice: 66180 },
+            { id: 12, title: "뉴욕 5박 6일 여행", basePrice: 66211 },
+            { id: 13, title: "세부 6박 7일 여행", basePrice: 39082 },
+            { id: 14, title: "암스테르담 6박 7일 여행", basePrice: 84961 },
+            { id: 15, title: "싱가포르 5박 6일 여행", basePrice: 84757 },
+            { id: 16, title: "후쿠오카 4박 5일 여행", basePrice: 47331 },
+            { id: 17, title: "보라카이 4박 5일 여행", basePrice: 44929 },
+            { id: 18, title: "방콕 6박 7일 여행", basePrice: 57836 },
+            { id: 19, title: "로마 5박 6일 여행", basePrice: 65906 },
+            { id: 20, title: "파타야 5박 6일 여행", basePrice: 52801 },
+            { id: 21, title: "베를린 7박 8일 여행", basePrice: 79642 },
+            { id: 22, title: "런던 3박 4일 여행", basePrice: 42317 },
+            { id: 23, title: "괌 4박 5일 여행", basePrice: 39821 },
+            { id: 24, title: "바르셀로나 5박 6일 여행", basePrice: 71274 },
+            { id: 25, title: "오클랜드 6박 7일 여행", basePrice: 78864 },
+            { id: 26, title: "샌프란시스코 3박 4일 여행", basePrice: 44570 },
+            { id: 27, title: "멜버른 6박 7일 여행", basePrice: 52428 },
+            { id: 28, title: "밴쿠버 5박 6일 여행", basePrice: 69922 },
+            { id: 29, title: "제주도 2박 3일 여행", basePrice: 36200 },
+            { id: 30, title: "나고야 3박 4일 여행", basePrice: 43877 },
+            { id: 31, title: "뉴욕 7박 8일 여행", basePrice: 76531 },
+            { id: 32, title: "하노이 3박 4일 여행", basePrice: 33774 },
+            { id: 33, title: "푸켓 6박 7일 여행", basePrice: 59137 },
+            { id: 34, title: "도쿄 4박 5일 여행", basePrice: 47006 },
+            { id: 35, title: "쿠알라룸푸르 4박 5일 여행", basePrice: 54629 },
+            { id: 36, title: "보라카이 5박 6일 여행", basePrice: 42599 },
+            { id: 37, title: "세부 3박 4일 여행", basePrice: 47890 },
+            { id: 38, title: "후쿠오카 6박 7일 여행", basePrice: 65508 },
+            { id: 39, title: "파리 4박 5일 여행", basePrice: 82320 },
+            { id: 40, title: "다낭 6박 7일 여행", basePrice: 46987 },
+            { id: 41, title: "프라하 6박 7일 여행", basePrice: 72119 },
+            { id: 42, title: "싱가포르 4박 5일 여행", basePrice: 68303 },
+            { id: 43, title: "괌 3박 4일 여행", basePrice: 40879 },
+            { id: 44, title: "시드니 5박 6일 여행", basePrice: 70106 },
+            { id: 45, title: "로마 6박 7일 여행", basePrice: 80567 },
+            { id: 46, title: "제주도 5박 6일 여행", basePrice: 37721 },
+            { id: 47, title: "베를린 3박 4일 여행", basePrice: 73850 },
+            { id: 48, title: "방콕 5박 6일 여행", basePrice: 52440 },
+            { id: 49, title: "샌프란시스코 7박 8일 여행", basePrice: 87645 },
+            { id: 50, title: "오사카 2박 3일 여행", basePrice: 39111 },
           ],
         },
       });
