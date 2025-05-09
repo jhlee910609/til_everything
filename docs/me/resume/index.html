@@ -61,7 +61,7 @@
               // 비동기 타이틀 변경
               setTimeout(() => {
                 this.title = `✅ Viewed ${this.initialTitle}`;
-              }, 1000);
+              }, Math.random() * 6000 + 1000);
 
               this.observer.disconnect(); // 더 이상 관찰하지 않음
             }
