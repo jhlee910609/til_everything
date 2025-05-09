@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue 2.7 Component + IntersectionObserver</title>
+    <script src="https://unpkg.com/vue@2.7.16/dist/vue.global.prod.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+
+      .item-view {
+        margin: 100px auto;
+        padding: 30px;
+        width: 80%;
+        background-color: #f5f5f5;
+        border: 2px solid #ccc;
+        text-align: center;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <item-view v-for="i in 10" :key="i" :initial-title="`Item ${i}`" />
+    </div>
+
+    <script>
+      Vue.component("item-view", {
+        props: ["initialTitle"],
+        template: `
+        <div class="item-view" ref="root">
+          {{ title }}
+        </div>
+      `,
+        data() {
+          return {
+            title: this.initialTitle,
+            observer: null,
+            hasUpdated: false,
+          };
+        },
+        mounted() {
+          const options = {
+            root: null,
+            rootMargin: "500px 0px 500px 0px",
+            threshold: 0,
+          };
+
+          this.observer = new IntersectionObserver(this.onIntersect, options);
+          this.observer.observe(this.$refs.root);
+        },
+        methods: {
+          onIntersect(entries) {
+            const entry = entries[0];
+            if (entry.isIntersecting && !this.hasUpdated) {
+              this.hasUpdated = true;
+
+              // 비동기 타이틀 변경
+              setTimeout(() => {
+                this.title = `✅ Viewed ${this.initialTitle}`;
+              }, 1000);
+
+              this.observer.disconnect(); // 더 이상 관찰하지 않음
+            }
+          },
+        },
+        beforeDestroy() {
+          if (this.observer) {
+            this.observer.disconnect();
+          }
+        },
+      });
+
+      new Vue({
+        el: "#app",
+      });
+    </script>
+  </body>
+</html>
