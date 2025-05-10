@@ -10,16 +10,9 @@
         margin: 0;
         padding: 1rem;
       }
-      .item {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-      }
+
       .skeleton {
         display: inline-block;
-        height: 1em;
-        width: 5em;
         background: linear-gradient(90deg, #eee, #ddd, #eee);
         background-size: 200% 100%;
         animation: pulse 1.2s ease-in-out infinite;
@@ -33,6 +26,15 @@
           background-position: -200% 0;
         }
       }
+      .item {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        max-width: 400px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
     </style>
   </head>
   <body>
@@ -44,15 +46,20 @@
       Vue.component("item-view", {
         props: ["item"],
         template: `
-        <div class="item" ref="item">
-          <h3>{{ item.title }}</h3>
-          <p>
-            가격:
-            <span v-if="loading"><span class="skeleton"></span></span>
-            <span v-else>{{ livePrice.toLocaleString() }}원</span>
-            <small v-if="!loading && livePrice !== item.basePrice">(실시간 가격)</small>
-          </p>
-        </div>
+           <div class="item" ref="item">
+      <div v-if="loading">
+        <div class="skeleton" style="width: 60%; height: 1.5em; margin-bottom: 0.3rem;"></div>
+        <div class="skeleton" style="width: 40%; height: 1.4em;"></div>
+      </div>
+      <div v-else>
+        <h3>{{ item.title }}</h3>
+        <p>
+          가격:
+          <span>{{ (item.livePrice ?? item.basePrice).toLocaleString() }}원</span>
+          <small v-if="item.livePrice != null">(실시간 가격)</small>
+        </p>
+      </div>
+    </div>
       `,
         data() {
           return {
