@@ -31,8 +31,9 @@
         border-radius: 8px;
         padding: 1rem;
         margin-bottom: 1rem;
-        max-width: 400px;
+        width: 100%;
         background: #fff;
+        min-height: 150px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       }
     </style>
@@ -48,8 +49,8 @@
         template: `
            <div class="item" ref="item">
       <div v-if="loading">
-        <div class="skeleton" style="width: 60%; height: 1.5em; margin-bottom: 0.3rem;"></div>
-        <div class="skeleton" style="width: 40%; height: 1.4em;"></div>
+        <div class="skeleton" style="width: 60%; height: 37px; margin-bottom: 1rem;"></div>
+        <div class="skeleton" style="width: 40%; height: 37px;"></div>
       </div>
       <div v-else>
         <h3>{{ item.title }}</h3>
