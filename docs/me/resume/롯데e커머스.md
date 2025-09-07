@@ -1,5 +1,28 @@
 # 롯데e커머스 (롯데ON)
 
+## 사용 기술 스택
+
+### Frontend
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+
+- **Vue 2.7** (전시 페이지)
+- **React** (검색 페이지)
+- **JavaScript**, **TypeScript**
+
+### Build & Development Tools
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Vitest](https://img.shields.io/badge/vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+
+- **Vite** (빌드 도구)
+- **Vitest** (테스팅)
+- **Webpack** (검색 페이지)
+
+### Styling & Code Quality
+![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+
+- **SCSS**
+- **ESLint**
+- **Prettier**
+
 ## 기본 정보
 - **재직 기간**: 2022.03 ~ 현재 (3년 4개월)
 - **부서**: 롯데쇼핑 e커머스사업본부 전시개발팀
@@ -57,29 +80,6 @@
 - React-Query를 통한 효율적인 데이터 캐싱
 - 컴포넌트 lazy loading을 통한 초기 로딩 최적화
 - 불필요한 re-rendering 방지
-
-## 사용 기술 스택
-
-### Frontend
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-
-- **Vue 2.7** (전시 페이지)
-- **React** (검색 페이지)
-- **JavaScript**, **TypeScript**
-
-### Build & Development Tools
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Vitest](https://img.shields.io/badge/vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
-
-- **Vite** (빌드 도구)
-- **Vitest** (테스팅)
-- **Webpack** (검색 페이지)
-
-### Styling & Code Quality
-![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
-
-- **SCSS**
-- **ESLint**
-- **Prettier**
 
 ## 성과 및 기여도
 

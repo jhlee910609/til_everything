@@ -1,5 +1,38 @@
 # WeStudy
 
+## 사용 기술 스택
+
+### Frontend
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+- **React.js** (컴포넌트 개발)
+- **JavaScript (ES6)**
+
+### State Management & Libraries
+
+- **MobX** (상태 관리)
+- **React Router** (라우팅)
+- **Material-UI** (UI 컴포넌트)
+- **ReChart** (차트 라이브러리)
+- **Lodash** (유틸리티)
+
+### Build & Development Tools
+
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+
+- **Webpack** (번들러)
+- **Babel** (트랜스파일러)
+
+### Styling & Code Quality
+
+![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+
+- **SCSS**
+- **ESLint (Standard JS)**
+- **Stylelint**
+- **Reset CSS**
+
 ## 기본 정보
 
 - **재직 기간**: 2019.05 ~ 2019.11 (7개월)
@@ -62,39 +95,6 @@
   - 재사용 가능한 table, pagination, 검색, 필터 컴포넌트 개발
 
 ![CRM Features](https://camo.githubusercontent.com/415e83dc0e23eac400f408c9dc399ecae5c0b6e5166c8c5f84ff7a90458d7f40/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f30303679386d4e3667793167383571643475666a766a33307579306a7a3736712e6a7067)
-
-## 사용 기술 스택
-
-### Frontend
-
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-- **React.js** (컴포넌트 개발)
-- **JavaScript (ES6)**
-
-### State Management & Libraries
-
-- **MobX** (상태 관리)
-- **React Router** (라우팅)
-- **Material-UI** (UI 컴포넌트)
-- **ReChart** (차트 라이브러리)
-- **Lodash** (유틸리티)
-
-### Build & Development Tools
-
-![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
-
-- **Webpack** (번들러)
-- **Babel** (트랜스파일러)
-
-### Styling & Code Quality
-
-![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
-
-- **SCSS**
-- **ESLint (Standard JS)**
-- **Stylelint**
-- **Reset CSS**
 
 ## 성과 및 기여도
 
