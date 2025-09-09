@@ -50,8 +50,8 @@
   - 카테고리별 맞춤형 UI/UX
   - 반응형 웹 디자인
 
-![[vertical/image.png]] ![[vertical/2.png]]
-![[vertical/3.png]] ![[vertical/4.png]]
+![버티컬 서비스 1](../../../attachments/vertical/image.png) ![버티컬 서비스 2](../../../attachments/vertical/2.png)
+![버티컬 서비스 3](../../../attachments/vertical/3.png) ![버티컬 서비스 4](../../../attachments/vertical/4.png)
 
 ### 3. 검색 필터 및 레이어 개선 (2024.03~현재)
 
