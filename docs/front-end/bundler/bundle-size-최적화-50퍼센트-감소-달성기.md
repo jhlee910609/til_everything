@@ -18,6 +18,41 @@
   - 현업에서 운영하는 모든 컴포넌트들이 dynamic import 형태로 구현되어 있었습니다.
   - 이로 인해 참조 추적이 어려워 어떤 컴포넌트가 실제로 사용되고 있는지 파악하기 매우 어려웠습니다.😢
 
+  ```vue
+  <!-- Vue 2.6 SFC 예시 - API를 통해 컴포넌트 리스트를 받아와 동적으로 렌더링 -->
+  <template>
+    <div>
+      <component 
+        v-for="(comp, index) in componentList"
+        :key="index"
+        :is="getDynamicComponent(comp.name)" 
+        v-bind="comp.props"
+      />
+    </div>
+  </template>
+
+  <script>
+  export default {
+    data() {
+      return {
+        componentList: [],
+      };
+    },
+    async created() {
+      // API에서 렌더링할 컴포넌트 리스트 받아오기
+      const response = await this.fetchPageConfig();
+      this.componentList = response.componentList; // 여러 컴포넌트 정보가 배열로 전달
+    },
+    methods: {
+      getDynamicComponent(componentName) {
+        // 모든 컴포넌트가 SFC 형태로 dynamic import로 로드됨
+        return () => import(`@/components/${componentName}.vue`);
+      }
+    }
+  };
+  </script>
+  ```
+
 - **미사용 코드들의 누적**
   - 불필요한 dynamic import component들이 계속 쌓여있었습니다.
   - 미사용 페이지들도 여전히 번들에 포함되어 있었습니다.
