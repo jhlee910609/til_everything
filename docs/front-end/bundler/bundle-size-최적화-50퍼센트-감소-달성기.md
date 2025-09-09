@@ -22,10 +22,10 @@
   <!-- Vue 2.6 SFC 예시 - API를 통해 컴포넌트 리스트를 받아와 동적으로 렌더링 -->
   <template>
     <div>
-      <component 
+      <component
         v-for="(comp, index) in componentList"
         :key="index"
-        :is="getDynamicComponent(comp.name)" 
+        :is="getDynamicComponent(comp.name)"
         v-bind="comp.props"
       />
     </div>
@@ -47,8 +47,8 @@
       getDynamicComponent(componentName) {
         // 모든 컴포넌트가 SFC 형태로 dynamic import로 로드됨
         return () => import(`@/components/${componentName}.vue`);
-      }
-    }
+      },
+    },
   };
   </script>
   ```
@@ -111,10 +111,10 @@
 
 | 구분                  | 디바이스 | Before  | After   | 감소량  | 감소율 |
 | --------------------- | -------- | ------- | ------- | ------- | ------ |
-| 총 페이지(매장)       | PC       | 64.44MB | 29.94MB | -34.5MB | -53%   |
-| 총 페이지(매장)       | Mobile   | 39.98MB | 28.88MB | -11.1MB | -24.4% |
-| 사내 공용 node module | PC       | 2.16MB  | 1.46MB  | -0.7MB  | -32.4% |
-| 사내 공용 node module | Mobile   | 3.73MB  | 2.82MB  | -0.91MB | -24.4% |
+| 총 페이지             | PC       | 64.44MB | 29.94MB | -34.5MB | -53%   |
+| 총 페이지             | Mobile   | 39.98MB | 28.88MB | -11.1MB | -24.4% |
+| 전사 공용 node module | PC       | 2.16MB  | 1.46MB  | -0.7MB  | -32.4% |
+| 전사 공용 node module | Mobile   | 3.73MB  | 2.82MB  | -0.91MB | -24.4% |
 
 ### 추가적인 성과
 
