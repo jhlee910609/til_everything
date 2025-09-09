@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /docs/me/resume/
 Sitemap: https://jhlee910609.github.io/til_everything/sitemap.xml
