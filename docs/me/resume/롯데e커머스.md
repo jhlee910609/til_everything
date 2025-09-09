@@ -50,6 +50,9 @@
   - 카테고리별 맞춤형 UI/UX
   - 반응형 웹 디자인
 
+![[vertical/image.png]] ![[vertical/2.png]]
+![[vertical/3.png]] ![[vertical/4.png]]
+
 ### 3. 검색 필터 및 레이어 개선 (2024.03~현재)
 
 **검색 성능 최적화 및 사용자 경험 개선**
