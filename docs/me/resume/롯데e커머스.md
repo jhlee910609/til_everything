@@ -61,7 +61,7 @@
 - **서비스 개발**
 
   - 온앤더럭셔리, 온앤더패션, 온앤더키즈 (서비스 종료)
-  - 국내 숙소 예약 서비스
+  - [국내 숙소 예약 서비스](https://www.lotteon.com/m/display/shop/seltDpShop/59901?apiType=accommodation)
 
 - **주요 기능**
   - 각 버티컬에 특화된 상품 전시 페이지
