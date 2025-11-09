@@ -56,9 +56,9 @@
 
 #### 역할 및 담당 업무
 
-- 검색 영역 최적화 작업 수행
 - React-Query Memory Caching 및 AbortController 활용하여 비동기 race condition 문제 해결 및 요청 취소 처리
 - 필터 컴포넌트 렌더링 효율화: 클릭 시에만 렌더링, 기존 visibility 방식에서 DOM attach/detach 방식으로 개선
+- 검색 영역 최적화 작업 수행
 
 #### 성과
 
