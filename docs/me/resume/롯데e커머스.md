@@ -31,17 +31,17 @@
 
 ### 1. 버티컬 신규 서비스 개발 (2022.10~2023.05)
 
-**매출과 직결된 버티컬 서비스 구축**
+#### 역할 및 담당 업무
 
-- **서비스 개발**
+- 온앤더럭셔리, 온앤더패션, 온앤더키즈 (서비스 종료) 및 국내 숙소 예약 서비스 개발
+- 각 서비스별 UI/UX 설계 및 반응형 웹 디자인 적용
+- 각 버티컬에 특화된 상품 전시 페이지 구축
 
-  - 온앤더럭셔리, 온앤더패션, 온앤더키즈 (서비스 종료)
-  - [국내 숙소 예약 서비스](https://www.lotteon.com/m/display/shop/seltDpShop/59901?apiType=accommodation)
+#### 성과
 
-- **주요 기능**
-  - 각 버티컬에 특화된 상품 전시 페이지
-  - 카테고리별 맞춤형 UI/UX
-  - 반응형 웹 디자인
+- 신규 매출 채널 확보
+- 서비스 완성도 향상
+- 다양한 버티컬 서비스 런칭에 기여
 
 <div align="center">
   <img src="../../../attachments/vertical/image.png" width="45%" alt="버티컬 서비스 1" style="margin: 2px;">
@@ -54,40 +54,30 @@
 
 ### 2. 전시 영역 UI 개발 및 검색 필터 개선 (2024.03~현재)
 
-**검색 성능 최적화 및 사용자 경험 개선**
+#### 역할 및 담당 업무
 
-#### 성능 최적화
+- 검색 영역 최적화 작업 수행
+- React-Query Memory Caching 및 AbortController 활용하여 비동기 race condition 문제 해결 및 요청 취소 처리
+- 필터 컴포넌트 렌더링 효율화: 클릭 시에만 렌더링, 기존 visibility 방식에서 DOM attach/detach 방식으로 개선
 
-- **React-Query Memory Caching** 활용하여 비동기 race condition 문제 해결
-- **AbortController** 활용하여 request 취소로 rendering 최적화
-- **필터 Component 최적화**
-  - 필터 클릭 시에만 component rendering하도록 수정
-  - 기존 visibility show/hide → DOM attach/detach로 개선
-  - **초기 필터 open 시 로딩 시간 단축**: 1841ms → 1711ms
+#### 성과
 
-#### 기술적 개선사항
-
-- React-Query를 통한 효율적인 데이터 캐싱
-- 컴포넌트 lazy loading을 통한 초기 로딩 최적화
-- 불필요한 re-rendering 방지
+- 필터 초기 로딩 시간 7% 단축 (1841ms → 1711ms)
+- 사용자 경험 개선 및 전환율 향상
 
 ### 3. 레거시 개선 및 개발환경 개선
 
-**6개월 간 롯데온 전시 총 페이지(매장) bundle size 50% 감소 달성**
+#### 역할 및 담당 업무
 
-#### 최적화 작업
-
-- **무거운 Third-party Library 교체**
-
-  - moment.js (67KB) → day.js (2KB) - 97% 감소
-  - lodash (71KB) → lodash.es (24KB) - 66% 감소
-  - lottie (158KB) → lottie-light-web (34KB) - 78% 감소
-
-- **불필요한 코드 제거**
-  - 불필요한 dynamic import component 조사 후 모두 제거
-  - PO와 협업하여 미사용 페이지 전부 제거
+- 번들 사이즈 축소를 위한 무거운 서드파티 라이브러리 교체(moment.js → day.js 등)
+- 불필요한 코드 및 dynamic import 컴포넌트 제거
+- PO와 협업하여 미사용 페이지 전부 제거
 
 #### 성과
+
+- PC 총 페이지(매장) 번들 사이즈 64.44MB → 29.94MB (53% 감소)
+- Mobile 총 페이지(매장) 번들 사이즈 39.98MB → 28.88MB (24% 감소)
+- 사내 공용 node module 용량도 크게 절감
 
 | 구분                  | 디바이스 | Before  | After   | 감소량  | 감소율 |
 | --------------------- | -------- | ------- | ------- | ------- | ------ |
@@ -96,17 +86,28 @@
 | 사내 공용 node module | PC       | 2.16MB  | 1.46MB  | -0.7MB  | -32.4% |
 | 사내 공용 node module | Mobile   | 3.73MB  | 2.82MB  | -0.91MB | -24.4% |
 
-### 4. 업무 효율을 위한 Dashboard 개발
+### 4. 업무 효율을 위한 Dashboard 개발(Bigbro 프로젝트)
+
+#### 역할 및 담당 업무
 
 - 서비스 운영 효율화를 위한 사내 전시 관리 대시보드 개발
-- 운영자가 실시간으로 데이터 모니터링 및 노출 영역 제어 가능하도록 구현
-- React + Recoil 기반 상태관리 및 GraphQL API 연동
+- React + Recoil 기반 상태관리 및 GraphQL API 연동하여 실시간 데이터 모니터링 및 노출 영역 제어 기능 구현
+
+#### 성과
+
+- 운영 자동화 및 업무 효율 증대
 
 ### 5. 프론트엔드 AI 툴 도입을 통한 DX 개선
 
-- Cursor AI, Codeium 등 AI 기반 코드 제안 툴을 프론트엔드 워크플로우에 도입
-- 반복적 코드 패턴 자동화 및 리뷰 효율 개선
-- 팀 내 개발 생산성 및 품질 향상에 기여
+#### 역할 및 담당 업무
+
+- Cursor AI, Codeium 등 AI 기반 코드 제안 툴 도입
+- 반복적 코드 패턴 자동화 및 코드 리뷰 효율 개선 환경 구축
+
+#### 성과
+
+- 개발 생산성 및 품질 향상
+- 팀 단위 디지털 전환(DX) 개선
 
 ## 학습 및 성장
 
