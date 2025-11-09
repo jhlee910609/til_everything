@@ -67,6 +67,9 @@ Bridge Page인 template page 개발과 SEO 및 Lazy Loading 구현을 진행하�
   - 드라이브/폴더 권한 부여, CRUD 기능 개발
 - 사용자 권한 기능 개발
   - Group 설정, 드라이브 접근 기능
+- 사용자 권한에 따른 기능 제약 로직 및 Wrapper Component 설계
+  - 사용자 권한(Owner, Member, Viewer 등)에 따라 기능 접근을 제어하는 공통 Wrapper 컴포넌트 구현
+  - 권한에 따라 버튼 활성화, 편집 가능 여부, 기능 노출 등을 제어하는 구조 설계
 - B2B 특화 기능인 브랜드 키트 기능 제공
 - 브랜드 키트 개발
   - B2B용 엔터프라이즈 기능
