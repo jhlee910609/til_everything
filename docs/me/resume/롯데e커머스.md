@@ -51,7 +51,7 @@
   <img src="../../../attachments/vertical/4.png" width="45%" alt="버티컬 서비스 4" style="margin: 2px;">
 </div>
 
-### 2. 전시 영역 UI 개발 및 검색 필터 개선 (2024.03~현재)
+### 2. 전시 영역 UI 개발 및 검색 필터 개선
 
 #### 역할 및 담당 업무
 
