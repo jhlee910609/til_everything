@@ -40,7 +40,7 @@
 
 ### 1. 템플릿 페이지 개발 (2020.08)
 
-Bridge Page인 template page 개발과 SEO 및 Lazy Loading 구현을 진행하였다.
+Bridge Page인 template page 개발과 SEO 및 Lazy Loading 적용
 
 #### 역할 및 담당 업무
 
@@ -55,7 +55,7 @@ Bridge Page인 template page 개발과 SEO 및 Lazy Loading 구현을 진행하�
 
 ### 2. Workspace 개발 (2021.04 ~ 2022.08)
 
-디자인 관리 서비스인 workspace 개발을 통해 폴더, 권한, 브랜드키트 기능을 구현하였다.
+디자인 관리 서비스인 workspace 개발을 통해 폴더, 권한, 브랜드키트 기능 구현
 
 ![workspace](https://camo.githubusercontent.com/66716b948d72266c914b8cdb1c6f6493bb84d7b7fb210366fcbea48ade73ff88/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f3030386933736b4e67793167786a6171643562616e673330676f3061666232392e676966)
 
@@ -138,7 +138,7 @@ JsSpreadsheet를 포크하여 차트 그리드 개발을 진행
 
 ### 6. 성능 최적화 (2020.08 ~ 2020.11)
 
-Intersection Observer를 도입하여 Lazy Loading을 적용하였다.
+Intersection Observer을 활용한 Image Lazy Loading 적용
 
 #### 역할 및 담당 업무
 
