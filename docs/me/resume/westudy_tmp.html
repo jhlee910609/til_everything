@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>westudy.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="westudy">WeStudy</h1>
+<p><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB" alt="React"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E" alt="JavaScript"> <img src="https://img.shields.io/badge/MobX-FF9955?style=for-the-badge&amp;logo=mobx&amp;logoColor=white" alt="MobX"> <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&amp;logo=react-router&amp;logoColor=white" alt="React Router"> <img src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&amp;logo=mui&amp;logoColor=white" alt="Material-UI"> <img src="https://img.shields.io/badge/Lodash-3492FF?style=for-the-badge&amp;logo=lodash&amp;logoColor=white" alt="Lodash"> <img src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&amp;logo=webpack&amp;logoColor=black" alt="Webpack"> <img src="https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&amp;logo=babel&amp;logoColor=black" alt="Babel"> <img src="https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&amp;logo=SASS&amp;logoColor=white" alt="SCSS"> <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&amp;logo=eslint&amp;logoColor=white" alt="ESLint"></p>
+<h2 id="%EA%B8%B0%EB%B3%B8-%EC%A0%95%EB%B3%B4">기본 정보</h2>
+<ul>
+<li>재직 기간: 2019.05 ~ 2019.11 (7개월)</li>
+<li>회사명: WeStudy</li>
+<li>역할: Front-end Developer</li>
+<li>주요 업무: 학원 관리 CRM 솔루션 프론트엔드 개발</li>
+</ul>
+<h2 id="%EC%84%B1%EA%B3%BC-%EB%B0%8F-%EA%B8%B0%EC%97%AC%EB%8F%84">성과 및 기여도</h2>
+<ul>
+<li>Zero Base부터 완전한 CRM 시스템 단독 개발</li>
+<li>사내 Admin과 고객용 Admin 2개 시스템 구축</li>
+<li>15개 메뉴 기능 완전 구현</li>
+<li>Container-Presenter 패턴 적용으로 컴포넌트 재사용성 향상</li>
+<li>재사용 가능한 컴포넌트 설계 및 개발 (table, pagination, 검색, 필터)</li>
+<li>커스텀 Input Component 개발로 사용자 경험 향상</li>
+<li>B2B 학원 관리 솔루션 완전 구축</li>
+<li>포인트 관리 시스템 및 세금 계산서 발행 기능으로 비즈니스 프로세스 자동화</li>
+<li>영업 관리 시스템으로 영업 효율성 향상</li>
+</ul>
+<h2 id="%EC%A3%BC%EC%9A%94-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%B0%8F-%EC%97%85%EB%AC%B4">주요 프로젝트 및 업무</h2>
+<h3 id="1-%EA%B3%A0%EA%B0%9D-%EA%B4%80%EB%A6%AC%EC%9A%A9-%EC%82%AC%EB%82%B4-admin-%EA%B0%9C%EB%B0%9C-3%EC%A3%BC">1. 고객 관리용 사내 Admin 개발 (3주)</h3>
+<h4 id="%EC%97%AD%ED%95%A0-%EB%B0%8F-%EB%8B%B4%EB%8B%B9-%EC%97%85%EB%AC%B4">역할 및 담당 업무</h4>
+<ul>
+<li>학원 지점, 학원 브랜드, 직원별 가입 시스템 구현</li>
+<li>고객 가입 및 조회 기능 개발</li>
+<li>영업 및 지점 현황 관리 기능 개발 (포인트 입금/차감 내역, 지점 이슈 조회, 지점명 검색)</li>
+<li>영업 사원 및 에이전시의 영업 활동 조회 기능 개발</li>
+<li>포인트 관리(입금에 따른 포인트 추가/차감, 포인트 사용 내역 조회)</li>
+<li>세금 계산서 발행 기능 구현</li>
+</ul>
+<h4 id="%EC%84%B1%EA%B3%BC">성과</h4>
+<ul>
+<li>내부 관리 프로세스 자동화</li>
+<li>데이터 조회 효율성 향상</li>
+<li>포인트 및 영업 관리 간소화</li>
+</ul>
+<p><img src="https://camo.githubusercontent.com/cbe97e67f20ad31f71af55011d86c298dc4fdb7e93b277b1aacd547eb0560f77/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f30303679386d4e366779316738356f616d6e6e39356a3330726f3066763736722e6a7067" alt="WeStudy Admin"></p>
+<h3 id="2-%EA%B3%A0%EA%B0%9D%EC%9A%A9-crm-admin-%EA%B0%9C%EB%B0%9C-4%EA%B0%9C%EC%9B%94">2. 고객용 CRM Admin 개발 (4개월)</h3>
+<h4 id="%EC%97%AD%ED%95%A0-%EB%B0%8F-%EB%8B%B4%EB%8B%B9-%EC%97%85%EB%AC%B4">역할 및 담당 업무</h4>
+<ul>
+<li>B2B 고객 대상 학원 관리 솔루션 구축</li>
+<li>회원가입 및 로그인 시스템 구현, 입력 값 검증을 위한 커스텀 input component 개발</li>
+<li>미입력, 적합, 부적합 상태에 따른 UI 변화 구현</li>
+<li>대시보드 개발 (ReChart 라이브러리를 활용한 차트 컴포넌트, MobX 상태 관리, 기간별 데이터 조회 기능)</li>
+<li>15개 메뉴 운영 화면 개발 (재학생, 직원, 학부모, 행사, 수납, 상담, 강좌 등)</li>
+<li>목록(리스트) → 입력/수정 → 상세 플로우 구성</li>
+<li>재사용 가능한 table, pagination, 검색, 필터 컴포넌트 개발</li>
+</ul>
+<h4 id="%EC%84%B1%EA%B3%BC">성과</h4>
+<ul>
+<li>CRM 서비스 완성도 향상</li>
+<li>고객 데이터 관리 자동화</li>
+<li>관리자 및 고객 편의성 개선</li>
+</ul>
+<p><img src="https://camo.githubusercontent.com/3be7b3d65f69099a0167d388687f7c05dce79873e12d61a73641e18a4773979f/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f30303679386d4e36677931673835717462363663316a333163383075307768382e6a7067" alt="WeStudy CRM"></p>
+<p><img src="https://camo.githubusercontent.com/510726527065de7c1e1eb60076120a0a8bb54e3648cd4302099376cf481f5269/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f30303679386d4e36677931673835717462773978666a3330766c306e706162642e6a7067" alt="Dashboard"></p>
+<p><img src="https://camo.githubusercontent.com/415e83dc0e23eac400f408c9dc399ecae5c0b6e5166c8c5f84ff7a90458d7f40/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f30303679386d4e3667793167383571643475666a766a33307579306a7a3736712e6a7067" alt="CRM Features"></p>
+<h2 id="%ED%95%99%EC%8A%B5-%EB%B0%8F-%EC%84%B1%EC%9E%A5">학습 및 성장</h2>
+<h3 id="%EB%8B%A8%EB%8F%85-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC">단독 프로젝트 관리</h3>
+<ul>
+<li>저연차임에도 Zerobase 프론트엔드 프로젝트 set-up 부터 실제 프로덕션 배포까지의 경험</li>
+<li>기획, 디자인, 영업과 협업하며 개발 진행하며, bottom-up 방식의 업무 수행 경험</li>
+</ul>
+<h3 id="%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%84%A4%EA%B3%84-%EB%8A%A5%EB%A0%A5">아키텍처 설계 능력</h3>
+<ul>
+<li>Container-Presenter 패턴 적용 경험</li>
+<li>컴포넌트 재사용성을 고려한 설계 능력</li>
+</ul>
+<h3 id="%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%A7%80%EC%8B%9D-%EC%8A%B5%EB%93%9D">도메인 지식 습득</h3>
+<ul>
+<li>학원 관리 시스템 도메인 이해</li>
+<li>B2B CRM 시스템 개발 경험</li>
+</ul>
+
+</body>
+</html>
