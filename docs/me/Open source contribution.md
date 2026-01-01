@@ -31,7 +31,14 @@
 *   **WeakMap**: 메모리 누수 및 가비지 컬렉션 설명 오류 수정 ([Issue #2296](https://github.com/mdn/translated-content/issues/2296))
 *   **CORS**: 보안 정책 설명 관련 오역 수정 ([Issue #1323](https://github.com/mdn/translated-content/issues/1323))
 
-### 3. JSpreadsheet CE
+### 3. SEB 프론트엔드 취업 멘토링
+*Mentor*
+> **기간**: 2023.1 ~ 2023.7
+
+**활동 내용:**
+*   6개월 간 부트캠프 코드스테이트 국비 멘티들 대상으로 프론트엔드 프로젝트 코드리뷰 및 취업 멘토링 참여.
+
+### 4. JSpreadsheet CE
 *Contributor*
 > JavaScript Data Grid 라이브러리에 관심을 갖고, **작은 부분이라도 기여하고자** 개선을 시도했습니다.
 
