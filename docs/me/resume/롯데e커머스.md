@@ -1,115 +1,89 @@
 # 롯데e커머스 (롯데ON)
+> **프론트엔드 개발자** | 2022.03 ~ 현재 (3년 10개월)
+>
+> "대규모 사용자 환경의 **프론트엔드 성능 최적화**와 **레거시 개선**을 주도하며, 비즈니스 성장을 견인하는 개발자입니다."
 
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Vitest](https://img.shields.io/badge/vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black) ![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+## 🏆 핵심 성과
+*   **성능 개선**: 불필요한 의존성 제거 및 트리쉐이킹으로 **번들 사이즈 53% 감소** (64MB → 29MB).
+*   **최적화**: 검색 필터 렌더링 로직 개선으로 **초기 로딩 속도 7% 단축** (사용자 경험 개선).
+*   **비즈니스**: 온앤더럭셔리/패션 등 **신규 버티컬 서비스 론칭** 및 **여행/숙박 카테고리 확장** 주도.
 
-## 기본 정보
+## 🛠 기술 스택
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-- **재직 기간**: 2022.03 ~ 현재 (3년 10개월)
-- **부서**: 롯데쇼핑 e커머스사업본부 전시개발팀
-- **역할**: Front-end Developer
-- **주요 업무**: 롯데ON 상품 전시 및 검색 프론트엔드 개발
+---
 
-## 성과 및 기여도
+## 📂 주요 프로젝트
 
-### 성능 개선
+### 1. 여행/숙박 예약 서비스 론칭
+*2024.04 ~ 2024.07*
+> 롯데ON 내 신규 여행 카테고리를 확장하기 위해 숙박 검색 및 탐색 시스템을 구축한 프로젝트입니다.
 
-- **[[bundle-size-50%-감소]]**
-- **검색 필터 렌더링 시간 7% 단축** (1841ms → 1711ms)
+**과제 및 해결:**
+*   **검색 및 탐색 기능**: 1명의 동료 개발자와 협업하여 숙박 검색, 필터링, 날짜 선택 등 핵심 인터페이스 개발.
+*   **DX 및 병렬 개발**: 백엔드 API 지연 문제를 해결하기 위해 **MSW + Faker.js + Copilot** 기반의 Mocking 환경을 선제적으로 구축하여 개발 효율 극대화.
 
-### 비즈니스 기여
+**성과:**
+*   **적기 서비스 론칭**: 초기 성능 최적화(LCP 2.1초 달성)를 포함하여 목표 일정 내 안정적으로 서비스를 론칭.
+*   **사내 지식 공유**: 효율적인 Mocking 기반 프론트엔드 개발 프로세스를 정리하여 사내 기술 세션 발표 및 가이드라인 제안.
+*   **서비스 스크린샷**:
+    <div align="center">
+      <img src="../../../attachments/travel/list.png" width="30%" alt="숙박 리스트" style="margin: 2px;">
+      <img src="../../../attachments/travel/calendar.png" width="30%" alt="날짜 선택" style="margin: 2px;">
+      <img src="../../../attachments/travel/filter.png" width="30%" alt="필터 설정" style="margin: 2px;">
+    </div>
 
-- **버티컬 서비스 론칭**으로 새로운 매출 채널 구축
+### 2. 버티컬 신규 서비스 개발 및 론칭
+*2022.10 ~ 2023.05*
+> 롯데ON 내의 전문관(온앤더럭셔리, 온앤더패션 등)을 신규 구축하여 타겟 사용자층을 확장한 프로젝트입니다.
 
-### 기술적 기여
+**과제 및 해결:**
+*   **유연한 UI 아키텍처**: 다양한 버티컬 카테고리에 대응할 수 있는 **반응형 웹 템플릿** 설계.
+*   **컴포넌트 재사용성**: 각 전문관별 상이한 기획 요건을 공통 컴포넌트와 확장 패턴으로 해결하여 개발 효율성 증대.
 
-- 레거시 코드 개선
-- 컴포넌트 재사용성 향상
-- 기획/개발 효율성 증대를 위한 대시보드 개발
+**성과:**
+*   **비즈니스 성장**: 신규 매출 파이프라인 확보 및 플랫폼 전반의 트래픽 증대 기여.
+*   **서비스 스크린샷**:
+    <div align="center">
+      <img src="../../../attachments/vertical/image.png" width="45%" alt="버티컬 서비스 1" style="margin: 2px;">
+      <img src="../../../attachments/vertical/2.png" width="45%" alt="버티컬 서비스 2" style="margin: 2px;">
+    </div>
+    <div align="center">
+      <img src="../../../attachments/vertical/3.png" width="45%" alt="버티컬 서비스 3" style="margin: 2px;">
+      <img src="../../../attachments/vertical/4.png" width="45%" alt="버티컬 서비스 4" style="margin: 2px;">
+    </div>
 
-## 주요 프로젝트 및 업무
+### 3. 레거시 개선 및 DX (개발자 경험)
+*상시 진행*
+> 개발 생산성을 저해하는 레거시 환경을 개선하고, AI 도구를 도입하여 팀 전체의 효율을 높였습니다.
 
-### 1. 버티컬 신규 서비스 개발 (2022.10~2023.05)
+**주요 활동:**
+*   **레거시 정리**: 불필요한 페이지 및 컴포넌트를 기획팀과 협의하여 과감하게 정리.
+*   **AI 도구 도입**: **Cursor AI**를 팀 내 도입하고 전용 규칙(Rules)을 설정하여 코드 작성 시간 단축 및 리뷰 효율화.
+*   **사내 도구 개발**: 각종 전시 관련 지표를 시각화하여 공유하는 전시 관리 대시보드(Bigbro) 개발.
 
-#### 역할 및 담당 업무
+**성과:**
+*   **업무 효율 증대**: 사내 **베스트 프랙티스 선정** 및 전시 기획/개발 업무 효율 비약적 증대.
+*   **유지보수성 향상**: 사내 공용 모듈 용량 **32% 절감**으로 빌드 시간 및 비용 절약.
 
-- 온앤더럭셔리, 온앤더패션, 온앤더키즈 (서비스 종료) 및 국내 숙소 예약 서비스 개발
-- 각 서비스별 UI/UX 설계 및 반응형 웹 디자인 적용
-- 각 버티컬에 특화된 상품 전시 페이지 구축
+### 4. 검색 필터 렌더링 속도 개선
+*2023.06 ~ 진행중*
+> CSR 환경에서의 무거운 번들 사이즈와 렌더링 지연 문제를 해결하여 사용자 경험을 개선했습니다.
 
-#### 성과
+**문제 정의:**
+*   거대한 레거시 코드와 무분별한 라이브러리 사용으로 인해 초기 로딩 속도 저하.
+*   검색 필터 조작 시 불필요한 리렌더링으로 인터렉션 지연 발생.
 
-- 신규 매출 채널 확보
-- 다양한 버티컬 서비스 런칭에 기여
+**해결 방안:**
+*   **번들 최적화**: Moment.js를 Day.js로 교체, 미사용 코드 제거, Dynamic Import 적용.
+*   **렌더링 최적화**: 검색 필터 컴포넌트의 가시성 제어를 DOM Attach/Detach 방식으로 변경하여 불필요한 리렌더링 방지.
+*   **네트워크 최적화**: **React-Query In-Memory Caching** 및 AbortController로 비동기 요청 중복 및 Race Condition 해결.
 
-<div align="center">
-  <img src="../../../attachments/vertical/image.png" width="45%" alt="버티컬 서비스 1" style="margin: 2px;">
-  <img src="../../../attachments/vertical/2.png" width="45%" alt="버티컬 서비스 2" style="margin: 2px;">
-</div>
-<div align="center">
-  <img src="../../../attachments/vertical/3.png" width="45%" alt="버티컬 서비스 3" style="margin: 2px;">
-  <img src="../../../attachments/vertical/4.png" width="45%" alt="버티컬 서비스 4" style="margin: 2px;">
-</div>
+**결과:**
+*   **번들 사이즈 감소**: PC **53%**, 모바일 **24%** 감소.
+*   **속도 향상**: 검색 필터 렌더링 시간 **7% 단축** (1841ms → 1711ms).
 
-### 2. 전시 영역 UI 개발 및 검색 필터 개선
+---
 
-#### 역할 및 담당 업무
-
-- React-Query In-Memory Caching 및 AbortController 활용하여 비동기 race condition 문제 해결 및 요청 취소 처리
-- 필터 컴포넌트 렌더링 효율화: 클릭 시에만 렌더링, 기존 visibility 방식에서 DOM attach/detach 방식으로 개선
-- 검색 영역 최적화 작업 수행
-
-#### 성과
-
-- 필터 초기 로딩 시간 7% 단축 (1841ms → 1711ms)
-- 사용자 경험 개선 및 전환율 향상
-
-### 3. 레거시 개선 및 개발환경 개선
-
-#### 역할 및 담당 업무
-
-- 번들 사이즈 축소를 위한 무거운 서드파티 라이브러리 교체(moment.js → day.js 등)
-- 불필요한 코드 및 dynamic import 컴포넌트 제거
-- PO와 협업하여 미사용 페이지 전부 제거
-
-#### 성과
-
-- PC 총 페이지(매장) 번들 사이즈 64.44MB → 29.94MB (53% 감소)
-- Mobile 총 페이지(매장) 번들 사이즈 39.98MB → 28.88MB (24% 감소)
-- 사내 공용 node module 용량도 크게 절감
-
-| 구분                  | 디바이스 | Before  | After   | 감소량  | 감소율 |
-| --------------------- | -------- | ------- | ------- | ------- | ------ |
-| 총 페이지(매장)       | PC       | 64.44MB | 29.94MB | -34.5MB | -53%   |
-| 총 페이지(매장)       | Mobile   | 39.98MB | 28.88MB | -11.1MB | -24.4% |
-| 사내 공용 node module | PC       | 2.16MB  | 1.46MB  | -0.7MB  | -32.4% |
-| 사내 공용 node module | Mobile   | 3.73MB  | 2.82MB  | -0.91MB | -24.4% |
-
-### 4. 업무 효율을 위한 Dashboard 개발(Bigbro 프로젝트)
-
-#### 역할 및 담당 업무
-
-- 서비스 운영 효율화를 위한 사내 전시 관리 대시보드 개발
-- 각종 전시 관련 지표 데이터 시각화하여 PO, 마케터에게 제공
-
-#### 성과
-
-- 전시 기획 및 개발의 업무 효율 증대
-- 사내 베스트 프렉티스 선정
-
-### 5. 프론트엔드 AI 툴 도입을 통한 DX 개선
-
-#### 역할 및 담당 업무
-
-- Cursor AI AI 기반 코드 제안 IDE 도입
-- 공용 Curosr rule 설정을 통한 반복적 코드 패턴 자동화 및 코드 리뷰 환경
-- 테스트 코드 생성 자동화
-
-#### 성과
-
-- 개발 생산성 및 품질 향상
-
-
-
-[//begin]: # "Autogenerated link references for markdown compatibility"
-[bundle-size-50%-감소]: ../../front-end/bundler/bundle-size-%EC%B5%9C%EC%A0%81%ED%99%94-50%ED%8D%BC%EC%84%BC%ED%8A%B8-%EA%B0%90%EC%86%8C-%EB%8B%AC%EC%84%B1%EA%B8%B0.md "Bundle Size 최적화로 50% 감소 달성하기"
-[//end]: # "Autogenerated link references"
+### [참고 링크]
+- [번들 사이즈 최적화 성공기](../../front-end/bundler/bundle-size-%EC%B5%9C%EC%A0%81%ED%99%94-50%ED%8D%BC%EC%84%BC%ED%8A%B8-%EA%B0%90%EC%86%8C-%EB%8B%AC%EC%84%B1%EA%B8%B0.md)
