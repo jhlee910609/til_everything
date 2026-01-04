@@ -1,75 +1,95 @@
 # 미리디 (miridih)
+
 > **프론트엔드 개발자** | 2020.01 ~ 2022.02 (2년 2개월)
 >
-> "웹 디자인 툴(SaaS)의 **성능 최적화**와 **구독 비즈니스 모델** 구현을 주도하며 유료 서비스 전환을 성공시킨 개발자입니다."
+> "웹 디자인 툴(SaaS)의 **성능 최적화**와 **구독 비즈니스 모델** 구현을 주도하며 유료 서비스 전환을 주도하였습니다."
 
 ## 🏆 핵심 성과
-*   **성능 개선**: 이미지 Lazy Loading 및 렌더링 최적화로 **페이지 로딩 속도 55% 향상** (11.55s → 5.14s).
-*   **시스템 설계**: 복잡한 권한 및 요금제 관리 로직을 **Wrapper Component 패턴**으로 설계하여 유료화 전환 성공.
-*   **마케팅 성장**: Node.js 기반 SEO 시스템 구축으로 **3개월간 검색 노출 수 170만 건** 달성.
+
+- **성능 개선**: 이미지 Lazy Loading 및 렌더링 최적화로 **페이지 로딩 속도 55% 향상** (11.55s → 5.14s).
+- **시스템 설계**: 복잡한 권한 및 요금제 관리 로직을 **Wrapper Component 패턴**으로 설계하여 유료화 전환 성공.
+- **마케팅 성장**: 월 1만 건 미만이던 검색 노출 수를 SEO 개선을 통해 3개월 만에 **170만 건**으로 대폭 증대 (약 170배 성장).
 
 ## 🛠 기술 스택
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Vanilla JS](https://img.shields.io/badge/vanilla_js-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ---
 
 ## 📂 주요 프로젝트
 
 ### 1. 유료 서비스 전환 및 스쿼드 리딩
-*2021.08 ~ 2022.02*
+
+_2021.08 ~ 2022.02_
+
 > '유료화 스쿼드' 리더로서 무료 서비스였던 미리캔버스를 구독형(SaaS) 모델로 전환하는 핵심 로직을 설계했습니다.
 
 **과제 및 해결:**
-*   **전역 상태 관리**: 사용자 요금제(Free/Pro/Enterprise)와 만료일, 권한 정보를 체계적으로 관리하는 아키텍처 설계.
-*   **확장 가능한 제어 로직**: 요금제별 기능 제한을 일관되게 적용하기 위해 **HOC 및 Wrapper Component** 도입.
-*   **팀 리딩**: 2명의 주니어 개발자를 멘토링하며 코드 리뷰 및 스케줄 관리 주도.
+
+- **전역 상태 관리**: 사용자 요금제(Free/Pro/Enterprise)와 만료일, 권한 정보를 체계적으로 관리하는 아키텍처 설계.
+- **확장 가능한 제어 로직**: 요금제별 기능 제한을 일관되게 적용하기 위해 **HOC 및 Wrapper Component** 도입.
+- **팀 리딩**: 2명의 주니어 개발자를 멘토링하며 코드 리뷰 및 스케줄 관리 주도.
 
 **결과:**
-*   **비즈니스 성공**: 유료 구독 시스템 설계 및 안정적 운영으로 서비스 수익화 성공.
-*   **유지보수성 확보**: 제약 로직 중앙화를 통해 정책 변경 대응 비용 최적화.
+
+- **비즈니스 성공**: 유료 구독 시스템 설계 및 안정적 운영으로 서비스 수익화 성공.
+- **유지보수성 확보**: 제약 로직 중앙화를 통해 정책 변경 대응 비용 최적화.
 
 ### 2. 워크스페이스 및 B2B 엔터프라이즈 기능 개발
-*2021.04 ~ 2022.02*
+
+_2021.04 ~ 2022.02_
+
 > '협업 도구'로의 확장을 위해 팀 단위 디자인 관리 시스템(워크스페이스) 및 브랜드 관리 기능을 개발했습니다.
 
 **주요 기능:**
-*   **파일 시스템 UI**: 폴더 구조 기반의 드라이브 시스템 및 드래그 앤 드롭 이동 로직 구현.
-*   **권한 기반 접근 제어**: 워크스페이스 역할(Owner, Member, Viewer)에 따른 세밀한 기능 제어.
-*   **브랜드 키트**: 기업 고객 전용 컬러/폰트 관리 및 요금제별 제한 로직 개발.
+
+- **파일 시스템 UI**: 폴더 구조 기반의 드라이브 시스템 및 드래그 앤 드롭 이동 로직 구현.
+- **권한 기반 접근 제어**: 워크스페이스 역할(Owner, Member, Viewer)에 따른 세밀한 기능 제어.
+- **브랜드 키트**: 기업 고객 전용 컬러/폰트 관리 및 요금제별 제한 로직 개발.
 
 **성과:**
-*   협업 기능 강화를 통해 **B2B 영업 핵심 소구 포인트** 확보.
+
+- 협업 기능 강화를 통해 **B2B 영업 핵심 소구 포인트** 확보.
 
 ![workspace](https://camo.githubusercontent.com/66716b948d72266c914b8cdb1c6f6493bb84d7b7fb210366fcbea48ade73ff88/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f3030386933736b4e67793167786a6171643562616e673330676f3061666232392e676966)
 
 ### 3. 차트 그리드(Chart Grid) 개발
-*2021.01 ~ 2021.03*
+
+_2021.01 ~ 2021.03_
+
 > 엑셀과 유사한 사용 경험을 제공하는 웹 기반 차트 데이터 편집 도구를 구현했습니다.
 
 **주요 기능:**
-*   **어댑터 패턴(Adapter Pattern)**: 다양한 차트 종류에 따른 데이터 입출력 처리를 유연하게 관리.
-*   **UI 커스텀**: 단축키 처리, 창 크기 조절(Resizable), 스타일 커스터마이징 등 고도화된 인터렉션 구현.
+
+- **어댑터 패턴(Adapter Pattern)**: 다양한 차트 종류에 따른 데이터 입출력 처리를 유연하게 관리.
+- **UI 커스텀**: 단축키 처리, 창 크기 조절(Resizable), 스타일 커스터마이징 등 고도화된 인터렉션 구현.
 
 ![chart grid](https://camo.githubusercontent.com/41c77c71c9ff22ec76c189fbe69a71fb2ad65b4b8d33ac9dbc070ead451d8f15/68747470733a2f2f747661312e73696e61696d672e636e2f6c617267652f3030386933736b4e67793167786a3965346e687467673330676f3061666833302e676966)
 
 ### 4. 핵심 성능 지표 및 SEO 최적화
-*2020.08 ~ 2020.11*
+
+_2020.08 ~ 2020.11_
+
 > 초기 로딩이 느리고 검색 엔진 노출이 어려웠던 SPA의 한계를 기술적으로 극복했습니다.
 
 **문제 정의:**
-*   고해상도 이미지 리소스가 많아 초기 로딩에 11초 이상 소요.
-*   SPA 구조로 인해 크롤링이 원활하지 않아 자연 유입 저조.
+
+- 고해상도 이미지 리소스가 많아 초기 로딩에 11초 이상 소요.
+- SPA 구조로 인해 크롤링이 원활하지 않아 자연 유입 저조.
 
 **해결 방안:**
-*   **Lazy Loading**: Intersection Observer API를 활용하여 뷰포트 내 이미지만 로드 (리소스 용량 89% 절감).
-*   **SEO 시스템**: Node.js 기반 Prerendering 서버를 구축하여 메타 데이터를 동적으로 주입.
+
+- **Lazy Loading**: Intersection Observer API를 활용하여 뷰포트 내 이미지만 로드 (리소스 용량 89% 절감).
+- **SEO 시스템**: Node.js 기반 Prerendering 서버를 구축하여 메타 데이터를 동적으로 주입.
 
 **결과:**
-*   **속도 향상**: 페이지 로딩 속도 **11.55초 → 5.14초**로 2배 이상 개선.
-*   **유입 증대**: 구글 서치 콘솔 기준 3개월 만에 **노출 수 170만 건** 달성.
+
+- **속도 향상**: 페이지 로딩 속도 **11.55초 → 5.14초**로 2배 이상 개선.
+- **유입 증대**: 구글 서치 콘솔 기준 3개월 만에 **노출 수 170만 건** 달성.
 
 ---
 
 ### [참고 링크]
+
 - [CSS 변수를 활용한 테마 변경 성능 개선](../../front-end/css/css%20global%20variables%EB%A1%9C%20theming%20%ED%95%98%EA%B8%B0.md)
 - [CSS-in-JS 도입을 통한 빌드 최적화](../sass-%EA%B1%B0%EB%91%AC%EB%82%B4%EA%B3%A0-css-in-js-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.md)

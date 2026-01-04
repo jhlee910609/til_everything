@@ -12,7 +12,7 @@
 
 ## 🛠 기술 스택
 
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ---
 
@@ -56,7 +56,7 @@ _2022.10 ~ 2023.05_
 - **비즈니스 성장**: 신규 매출 파이프라인 확보 및 플랫폼 전반의 트래픽 증대 기여.
 - **서비스 스크린샷**:
   <div align="center">
-    <img src="../../../attachments/vertical/image.png" width="45%" alt="버티컬 서비스 1" style="margin: 2px;">
+    <img src="../../../attachments/vertical/image.png" width="45%" alt="버티컬 서비스 1" style="margin: **2px**;">
     <img src="../../../attachments/vertical/2.png" width="45%" alt="버티컬 서비스 2" style="margin: 2px;">
   </div>
   <div align="center">
@@ -86,11 +86,11 @@ _2022.10 ~ 2023.05_
 
 **해결 방안:**
 
-- **번들 최적화**: Moment.js를 Day.js로 교체, 미사용 코드 제거, Dynamic Import 적용.
+- **번들 최적화**: Moment.js를 Day.js로 교체, lodash -> lodash/es로 교체, 미사용 코드와 모듈 제거, Dynamic Import 적용.
 
 **결과:**
 
-- **번들 사이즈 감소**: PC **53%**, 모바일 **24%** 감소.
+- **번들 사이즈 감소**: PC **53%**, 모바일 **24%** 감소. 초기 로딩 속도 개선은 미미.
 
 ---
 
