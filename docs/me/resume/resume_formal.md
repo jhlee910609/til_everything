@@ -81,7 +81,7 @@
     - 무분별한 dynamic import로 사용 유/무 판단이 어려운 컴포넌트 다수 존재.
     - 미사용 페이지 추적 불가(기획 히스토리 이슈).
   - **해결**:
-    - 라이브러리 교체(`Moment.js` → `Day.js`, `lodas` → `lodash/es` ) 및 **미사용 코드(Dead Code) 제거**, **적절한 상황에서의 Dynamic Import** 적용.
+    - 라이브러리 교체(`Moment.js` → `Day.js`, `lodash` → `lodash/es` ) 및 **미사용 코드(Dead Code) 제거**, **적절한 상황에서의 Dynamic Import** 적용.
     - 전시 기획자와 불필요한 전시 페이지 및 레거시 컴포넌트 정리로 공용 모듈 용량 최적화.
   - **성과**:
     - PC 번들 사이즈 **53%**, 모바일 **24%** 감소 (64MB → 29MB).
