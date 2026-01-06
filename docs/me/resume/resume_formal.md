@@ -113,9 +113,11 @@
   - 폴더 구조 기반의 파일 시스템 UI와 권한 별 기능 제어 로직을 구현하여 B2B 영업의 핵심 소구 포인트 확보.
 
 - [**템플릿 페이지 SEO 및 성능 최적화 (2020.08 ~ 2020.11)**](https://www.miricanvas.com/ko/templates?from=gnb)
+
   - **문제**: SPA 구조로 인한 크롤링 불가 문제와 고해상도 이미지 로딩 지연(11초 이상).
   - **해결**: **Prerendering** 제안 및 react-helmet을 활용한 메타 데이터 주입, Intersection Observer 기반 **Lazy Loading** 전면 적용.
   - **성과**: 월 1만 건 미만이던 검색 노출 수를 3개월 만에 **170만 건**으로 증대, 초기 로딩 속도 **55% 향상** (11.55s → 5.14s).
+
 - **차트 그리드(Chart Grid) 개발 (2021.01 ~ 2021.03)**
   - [JSpreadsheet CE](https://bossanova.uk/jspreadsheet/) 오픈소스를 fork하여 엑셀과 유사한 경험을 제공하는 웹 기반 차트 데이터 편집 도구 구현.
   - 어댑터 패턴(Adapter Pattern)을 활용하여 다양한 차트 데이터 입출력을 유연하게 처리.
